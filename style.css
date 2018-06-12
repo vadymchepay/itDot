@@ -11,13 +11,21 @@ body {
     background-size: cover;
     overflow: hidden;
     position: relative;
+
 }
 
-.part {
-    display: block;
+.logo_container {
+    max-width: 527px;
     position: absolute;
     top: 50%;
     left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.part {
+    display: inline-block;
+    position: absolute;
+
 }
 
 .circle {
