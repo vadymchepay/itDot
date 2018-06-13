@@ -3,10 +3,10 @@ body {
     padding: 0;
 }
 
-.main_logo {
+.main_header {
     width: 100%;
     height: 100vh;
-    background-image: url(img/bg1.png);
+    background-image: url(img/main_bg2.png);
     background-repeat: no-repeat;
     background-size: cover;
     overflow: hidden;
@@ -17,7 +17,7 @@ body {
 .logo_container {
     max-width: 527px;
     position: absolute;
-    top: 50%;
+    top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
@@ -32,14 +32,14 @@ body {
     margin-top: -232px;
     margin-left: -232px;
     z-index: 1;
-    animation: rotLeft 60s linear infinite;
+    animation: rotLeft 120s linear infinite;
 }
 
 .dots {
     margin-top: -264px;
     margin-left: -264px;
     z-index: 2;
-    animation: rotRight 40s linear infinite;
+    animation: rotRight 100s linear infinite;
 }
 
 .logo {
@@ -81,4 +81,140 @@ body {
     100% {
         transform: rotate(-360deg);
     }
+}
+
+.objects {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.object {
+    position: absolute;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.double_bubble {
+    width: 330px;
+    height: 316px;
+    background-image: url(img/double_bubble.png);
+    top: 27px;
+    left: 420px;
+}
+
+.bubble2 {
+    width: 155px;
+    height: 155px;
+    background-image: url(img/buuble2.png);
+    top: 251px;
+    left: 269px;
+}
+
+.bubble3 {
+    width: 75px;
+    height: 76px;
+    background-image: url(img/buuble3.png);
+    top: 578px;
+    left: 372px;
+}
+
+.bubble4 {
+    width: 89px;
+    height: 93px;
+    background-image: url(img/buuble4.png);
+    top: 612px;
+    left: 338px;
+}
+
+.bubble5 {
+    width: 231px;
+    height: 239px;
+    background-image: url(img/buuble5.png);
+    top: 621px;
+    left: 198px;
+}
+
+.bubble6 {
+    width: 229px;
+    height: 230px;
+    background-image: url(img/buuble6.png);
+    top: 838px;
+    left: 536px;
+}
+
+.bubble7 {
+    width: 111px;
+    height: 111px;
+    background-image: url(img/buuble7.png);
+    top: 126px;
+    left: 1541px;
+}
+
+.bubble8 {
+    width: 35px;
+    height: 33px;
+    background-image: url(img/buuble8.png);
+    top: 388px;
+    left: 1473px;
+}
+
+.cosmonaut {
+    width: 136px;
+    height: 143px;
+    background-image: url(img/cosmonaut.png);
+    top: 696px;
+    left: 1168px;
+}
+.rocket {
+    width: 64px;
+    height: 84px;
+    background-image: url(img/rocket.png);
+    top: 582px;
+    left: 1379px;
+}
+
+.ufo {
+    width: 82px;
+    height: 46px;
+    background-image: url(img/ufo.png);
+    top: 576px;
+    left: 239px;
+}
+
+.planet {
+    width: 229px;
+    height: 184px;
+    background-image: url(img/planet.png);
+    bottom: 52px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.satelite {
+    width: 33px;
+    height: 33px;
+    background-image: url(img/satelite.png);
+    top: 956px;
+    left: 1054px;
+}
+
+.spiral {
+    width: 337px;
+    height: 94px;
+    background-image: url(img/spiral.png);
+    bottom: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.meteors {
+    width: 455px;
+    height: 334px;
+    background-image: url(img/meteors.png);
+    top: 171px;
+    left: 1312px;
 }
