@@ -15,11 +15,12 @@ body {
 }
 
 .logo_container {
-    max-width: 527px;
+    max-width: 27.45%;
     position: absolute;
     top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
+    z-index: 2;
 }
 
 .part {
@@ -28,18 +29,19 @@ body {
 
 }
 
+
 .circle {
     margin-top: -232px;
     margin-left: -232px;
     z-index: 1;
-    animation: rotLeft 120s linear infinite;
+    animation: rotLeft 360s linear infinite;
 }
 
 .dots {
     margin-top: -264px;
     margin-left: -264px;
     z-index: 2;
-    animation: rotRight 100s linear infinite;
+    animation: rotRight 300s linear infinite;
 }
 
 .logo {
@@ -90,6 +92,7 @@ body {
     padding: 0;
     margin: 0;
     list-style: none;
+    z-index: 1;
 }
 
 .object {
@@ -98,123 +101,115 @@ body {
     background-size: cover;
 }
 
+.object img {
+    width: 100%;
+    height: 100%;
+}
 .double_bubble {
-    width: 330px;
-    height: 316px;
-    background-image: url(img/double_bubble.png);
-    top: 27px;
-    left: 420px;
+    max-width: 17.19%;
+    max-height: 29.42%;
+    top: 2.51%;
+    left: 21.88%;
 }
 
 .bubble2 {
-    width: 155px;
-    height: 155px;
-    background-image: url(img/buuble2.png);
-    top: 251px;
-    left: 269px;
+    max-width: 8.07%;
+    max-height: 14.43%;
+    top: 23.37%;
+    left: 14.01%;
 }
 
 .bubble3 {
-    width: 75px;
-    height: 76px;
-    background-image: url(img/buuble3.png);
-    top: 578px;
-    left: 372px;
+    max-width: 3.91%;
+    max-height: 7.08%;
+    top: 53.81%;
+    left: 19.38%;
 }
 
 .bubble4 {
-    width: 89px;
-    height: 93px;
-    background-image: url(img/buuble4.png);
-    top: 612px;
-    left: 338px;
+    max-width: 4.64%;
+    max-height: 8.66%;
+    top: 56.98%;
+    left: 17.60%;
 }
 
 .bubble5 {
-    width: 231px;
-    height: 239px;
-    background-image: url(img/buuble5.png);
-    top: 621px;
-    left: 198px;
+    max-width: 12.03%;
+    max-height: 22.25%;
+    top: 57.82%;
+    left: 10.31%;
 }
 
 .bubble6 {
-    width: 229px;
-    height: 230px;
-    background-image: url(img/buuble6.png);
-    top: 838px;
-    left: 536px;
+    max-width: 11.93%;
+    max-height: 21.41%;
+    top: 78.03%;
+    left: 27.92%;
 }
 
 .bubble7 {
-    width: 111px;
-    height: 111px;
-    background-image: url(img/buuble7.png);
-    top: 126px;
-    left: 1541px;
+    max-width: 5.78%;
+    max-height: 10.34%;
+    top: 11.73%;
+    left: 80.26%;
 }
 
 .bubble8 {
-    width: 35px;
-    height: 33px;
-    background-image: url(img/buuble8.png);
-    top: 388px;
-    left: 1473px;
+    max-width: 1.82%;
+    max-height: 3.07%;
+    top: 36.12%;
+    left: 76.72%;
 }
 
 .cosmonaut {
-    width: 136px;
-    height: 143px;
-    background-image: url(img/cosmonaut.png);
-    top: 696px;
-    left: 1168px;
+    max-width: 7.08%;
+    max-height: 13.31%;
+    top: 64.80%;
+    left: 60.83%;
+    z-index: 3
 }
 .rocket {
-    width: 64px;
-    height: 84px;
-    background-image: url(img/rocket.png);
-    top: 582px;
-    left: 1379px;
+    max-width: 3.33%;
+    max-height: 7.82%;
+    top: 54.19%;
+    left: 71.82%;
+    z-index: 2
 }
 
 .ufo {
-    width: 82px;
-    height: 46px;
-    background-image: url(img/ufo.png);
-    top: 576px;
-    left: 239px;
+    max-width: 4.27%;
+    max-height: 4.28%;
+    top: 53.63%;
+    left: 12.45%;
+    z-index: 3
 }
 
 .planet {
-    width: 229px;
-    height: 184px;
-    background-image: url(img/planet.png);
-    bottom: 52px;
+    max-width: 11.93%;
+    max-height: 17.13%;
+    bottom: 4.84%;
     left: 50%;
     transform: translateX(-50%);
 }
 
 .satelite {
-    width: 33px;
-    height: 33px;
-    background-image: url(img/satelite.png);
-    top: 956px;
-    left: 1054px;
+    max-width: 1.72%;
+    max-height: 3.07%;
+    top: 89.01%;
+    left: 54.90%;
 }
 
 .spiral {
-    width: 337px;
-    height: 94px;
-    background-image: url(img/spiral.png);
+    max-width: 17.55%;
+    max-height: 8.75%;
     bottom: 0px;
     left: 50%;
     transform: translateX(-50%);
 }
 
 .meteors {
-    width: 455px;
-    height: 334px;
-    background-image: url(img/meteors.png);
-    top: 171px;
-    left: 1312px;
+    max-width: 23.18%;
+    max-height: 31.10%;
+    top: 15.92%;
+    left: 68.33%;
 }
