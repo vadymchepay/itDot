@@ -19,13 +19,13 @@ body {
     position: absolute;
     top: 40%;
     left: 50%;
-    transform: translate(-50%, -50%) ;
+    transform: translate(-50%, -50%);
     z-index: 2;
 }
 
 @media screen and (max-width: 1366px) {
     .logo_container {
-         transform: translate(-50%, -50%) scale(0.7, 0.7);
+        transform: translate(-50%, -50%) scale(0.7, 0.7);
     }
 }
 
@@ -40,14 +40,14 @@ body {
     margin-top: -232px;
     margin-left: -232px;
     z-index: 1;
-    animation: rotLeft 360s linear infinite;
+    animation: rotLeft 240s linear infinite;
 }
 
 .dots {
     margin-top: -264px;
     margin-left: -264px;
     z-index: 2;
-    animation: rotRight 300s linear infinite;
+    animation: rotRight 200s linear infinite;
 }
 
 .logo {
@@ -108,7 +108,7 @@ body {
 }
 
 .object_move {
-    width: 100%;    
+    width: 100%;
     height: 100%;
     position: absolute;
     background-repeat: no-repeat;
@@ -138,7 +138,7 @@ body {
     max-height: 29.42%;
     top: 2.51%;
     left: 21.88%;
-   
+
 }
 
 .bubble2 {
@@ -146,7 +146,7 @@ body {
     max-height: 14.43%;
     top: 23.37%;
     left: 14.01%;
-    
+
 }
 
 .bubble3 {
@@ -154,7 +154,7 @@ body {
     max-height: 7.08%;
     top: 53.81%;
     left: 19.38%;
-    
+
 }
 
 .bubble4 {
@@ -162,7 +162,7 @@ body {
     max-height: 8.66%;
     top: 56.98%;
     left: 17.60%;
-   
+
 }
 
 .bubble5 {
@@ -170,7 +170,7 @@ body {
     max-height: 22.25%;
     top: 57.82%;
     left: 10.31%;
-   
+
 }
 
 .bubble6 {
@@ -178,7 +178,7 @@ body {
     max-height: 21.41%;
     top: 78.03%;
     left: 27.92%;
-    
+
 }
 
 .bubble7 {
@@ -186,7 +186,7 @@ body {
     max-height: 10.34%;
     top: 11.73%;
     left: 80.26%;
-   
+
 }
 
 .bubble8 {
@@ -203,6 +203,7 @@ body {
     left: 60.83%;
     z-index: 3
 }
+
 .rocket {
     max-width: 64px;
     max-height: 84px%;
@@ -213,7 +214,7 @@ body {
 
 .ufo {
     max-width: 82px;
-    max-height:46px;
+    max-height: 46px;
     top: 53.63%;
     left: 12.45%;
     z-index: 3
@@ -236,7 +237,7 @@ body {
     left: 68.33%;
 }
 
-.second_screen{
+.second_screen {
     width: 100%;
     height: 100vh;
     background-image: url(img/second_bg.png);
@@ -247,7 +248,7 @@ body {
     z-index: 1;
 }
 
-.logo_3d{
+.logo_3d {
     max-width: 100%;
     max-height: 100%;
 
@@ -259,12 +260,13 @@ body {
     bottom: 0;
     z-index: 2;
 }
+
 .logo_3d img {
     width: 100%;
     height: 100%;
 }
 
-.people{
+.people {
     width: 70.68%;
     height: 92.41%;
 
@@ -275,6 +277,7 @@ body {
     transform: translate(-50%, -50%);
     z-index: 3;
 }
+
 .people img {
     width: 100%;
     height: 100%;
@@ -286,20 +289,71 @@ body {
     height: 8.61%;
     top: 10.5%;
     left: 77.5%;
-    
+
 }
+
 .screens svg {
     width: 100%;
     height: 100%;
 }
+
+#screen_2 {
+    animation: moveRight1 5s linear infinite;
+}
+
+@keyframes moveRight1 {
+    0% {
+        transform: translate(12px, 7px);
+    }
+
+    25% {
+        transform: translate(78.676441px, 13.020000px);
+    }
+    50% {
+        transform: translate(78.676441px, 13.020000px);
+    }
+    75% {
+        transform: translate(78.676441px, 13.020000px);
+    }
+    100% {
+        transform: translate(12px, 7px);
+    }
+}
+
+.screen_3 {
+    animation: moveRight2 5s linear infinite;
+}
+
+@keyframes moveRight2 {
+    0% {
+        transform: translate(14px, 9px);
+    }
+
+    25% {
+        transform: translate(141.142857px, 19.530000px);
+    }
+    50% {
+        transform: translate(141.142857px, 19.530000px);
+    }
+    75% {
+        transform: translate(141.142857px, 19.530000px);
+    }
+    100% {
+        transform: translate(14px, 9px);
+    }
+}
+
+
+
 .lamp {
     position: absolute;
     width: 1.72%;
     height: 3.24%;
-    top: 4.35%;
-    left: 25%;
-    
+    top: 4%;
+    left: 24%;
+
 }
+
 .lamp svg {
     width: 100%;
     height: 100%;
@@ -307,17 +361,18 @@ body {
 
 .wheel_1 {
     position: absolute;
-/*
+    /*
     width: 0.8%;
     height: 1.3%;
 */
-    width: 10px;
-    height: 10px;
+    width: 12px;
+    height: 12px;
     top: 6.2%;
     left: 26.3%;
-    
-    
+
+
 }
+
 .wheel_1 img {
     width: 100%;
     height: 100%;
@@ -326,17 +381,18 @@ body {
 
 .wheel_2 {
     position: absolute;
-/*
+    /*
     width: 0.62%;
     height: 1.11%;
 */
-    width: 8px;
-    height: 8px;
+    width: 10px;
+    height: 10px;
     top: 5%;
     left: 27.3%;
-    
-    
+
+
 }
+
 .wheel_2 img {
     width: 100%;
     height: 100%;
@@ -350,11 +406,10 @@ body {
     top: 34.5%;
     left: 30.5%;
     z-index: 4;
-    
+
 }
+
 .message img {
     width: 100%;
     height: 100%;
 }
-
-
