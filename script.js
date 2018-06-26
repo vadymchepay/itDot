@@ -24,9 +24,6 @@ $(document).ready(function () {
             'left': - xPos / 20
             , 'top': yPos / 20
         });
-        $('.move_satelite').css({
-            'left': xPos / 15
-            , 'top':  - yPos / 15
-        });
+        
     });
 });
