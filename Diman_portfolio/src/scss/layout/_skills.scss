@@ -1,0 +1,51 @@
+/* Skills page
+--------------------------------------------------------------------------------*/
+
+.skills-page {
+  background: #EFF1F4;
+  overflow: hidden;
+  padding-bottom: 30px;
+
+  .tiles-container {
+    align-content: flex-start;
+  }
+
+  .tile {
+    padding: 0 25px;
+    margin: 15px 0;
+    border-radius: 0 !important;
+    color: #333333;
+    text-align: center;
+
+    h2 {
+      color: #333333;
+    }
+
+    h4 {
+      color: #333333;
+    }
+
+    p {
+      color: #333333;
+    }
+  }
+
+  .section-header {
+    background: transparent;
+  }
+
+  .skills-wrap {
+    visibility: visible;
+    animation-duration: 1s;
+    animation-delay: 0.5s;
+
+    .skills-content {
+      border: 1px solid #f9f9f9;
+      box-shadow: rgba(0, 0, 0, 0.13) 0 5px 10px;
+      padding: 5px;
+      > i {
+        font-size: 50px;
+      }
+    }
+  }
+}

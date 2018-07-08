@@ -1,0 +1,76 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the footer of the site/application.
+// -----------------------------------------------------------------------------
+.footer {
+  background: transparent;
+
+  .contact-content {
+    padding-bottom: 30px;
+
+    &.light-content {
+      background: #fcfcfc;
+    }
+
+    &.dark-content {
+      background: transparent;
+    }
+
+  }
+
+  .social-content {
+    padding: 50px 0 30px;
+
+    .social-links-content {
+      padding-bottom: 30px;
+
+      .social-links {
+        a {
+          width: 40px;
+          height: 40px;
+          line-height: 25px !important;
+          font-size: 1.2rem;
+          position: relative;
+          margin: 0 6px;
+          text-align: center;
+          display: inline-flex;
+          align-items: center;
+          align-content: center;
+          justify-content: center;
+          color: #d0cccc;
+          border: 1px solid #bbbbbb;
+          border-radius: 50%;
+          transition: all .5s cubic-bezier(0.165, 0.84, 0.44, 1);
+
+          &:hover {
+            background: #d7dde2;
+            color: #3f4246;
+            //color: #1da1f2; // Twitter
+            border-color: #cfd1d4;
+            transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+            transform: scale(1.2) rotate(360deg);
+          }
+        }
+      }
+    }
+
+    .footer-text {
+      p {
+        color: #fefefe;
+        font-weight: 100;
+        margin: 5px 0;
+        font-size: 1rem;
+      }
+
+      .footer-copyright {
+
+      }
+
+      .footer-made {
+        span {
+          color: #ff6b6a;
+        }
+      }
+
+    }
+  }
+}

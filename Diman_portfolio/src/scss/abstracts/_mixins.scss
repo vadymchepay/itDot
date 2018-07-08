@@ -1,0 +1,39 @@
+
+@mixin on-event($self: false) {
+  @if $self {
+    &,
+    &:hover,
+    &:active,
+    &:focus {
+      @content;
+    }
+  } @else {
+    &:hover,
+    &:active,
+    &:focus {
+      @content;
+    }
+  }
+}
+
+@mixin when-inside($context) {
+  #{$context} & {
+    @content;
+  }
+}
+
+@mixin flex-box($justify: center, $items: center, $content: center, $direction: row, $wrap: wrap) {
+  display: flex;
+  flex-direction: $direction;
+  flex-wrap: $wrap;
+  justify-content: $justify;
+  align-items: $items;
+  align-content: $content;
+  height: 100%;
+}
+
+@mixin img-url($img-url, $img-title) {
+  background: url(unquote($img-url + $img-title)) no-repeat;
+}
+
+

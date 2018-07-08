@@ -1,0 +1,60 @@
+/* Responsive mobile menu */
+
+.responsiveMobileMenu {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  background: rgba(51,51,51,.95);
+  opacity: 0;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 0.4s ease;
+
+  &.flex {
+    display: flex;
+    transition: all 0.4s ease;
+  }
+
+  &.display {
+    transition: all 0.4s ease;
+    opacity: 1;
+  }
+
+  ul {
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 50px 0;
+
+    li {
+      opacity: 0;
+      list-style-type: none;
+      color: #3b5a82;
+      font-weight: 100;
+      font-size: 1.5em;
+      font-family: Helvetica, Arial, sans-serif;
+      text-transform: uppercase;
+      transition: transform .3s ease, opacity .3s ease,-webkit-transform .3s ease;
+      transform: scale(.5);
+
+      &.fade {
+        transform: scale(1);
+        opacity: 1;
+      }
+
+      a {
+
+        h3 {
+          font-size: 1.6rem;
+          margin: 0;
+        }
+
+      }
+
+    }
+  }
+}
+

@@ -1,0 +1,57 @@
+// -----------------------------------------------------------------------------
+// This file contains very basic styles.
+// -----------------------------------------------------------------------------
+
+/**
+ * Set up a decent box model on the root element
+ */
+html, body {
+  height: 100%;
+  box-sizing: border-box;
+  font-family: 'Lato', Helvetica, Arial sans-serif !important;
+  font-weight: 100 !important;
+  background: #383F42;
+  font-size: 16px;
+}
+
+@media screen and (max-width: 767px) {
+  html, body {
+    font-size: 95% !important;
+  }
+}
+
+/**
+ * Make all elements from the DOM inherit from the parent box-sizing
+ * Since `*` has a specificity of 0, it does not override the `html` value
+ * making all elements inheriting from the root box-sizing value
+ * See: https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/
+ */
+*, *::before, *::after {
+  box-sizing: inherit;
+} 
+
+/**
+ * Basic styles for links
+ */
+a {
+  color: $brand-color;
+  text-decoration: none !important;
+  &:hover, &:active, &:focus {
+    text-decoration: none !important;
+  }
+
+  @include on-event {
+    color: $text-color;
+    text-decoration: underline;
+  }
+}
+
+/**
+ * Basic styles for headers
+ */
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 300;
+  text-transform: uppercase;
+  color: #f9f9f9;
+}
