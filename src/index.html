@@ -3,16 +3,61 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Document</title>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="transition.js"></script>
-    <link rel="stylesheet" href="style.css"> </head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ItDot</title>
+    <link rel="stylesheet" href="lib/bootstrap.min.css">
+    <link rel="stylesheet" href="lib/animate.css">
+    <link rel="stylesheet" href="css/main.css"> </head>
 
 <body>
+    <header class="header">
+        <nav class="nav-transparent flex-box">
+            <div class="logo-name">
+                <p>It<span> &nbsp Dot Company</span></p>
+            </div>
+            <div id="nav-icon2" class="menu-btn-wrapper">
+                <span class="menu-btn-line"></span>
+                <span class="menu-btn-line"></span>
+                <span class="menu-btn-line"></span>
+                <span class="menu-btn-line"></span>
+                <span class="menu-btn-line"></span>
+                <span class="menu-btn-line"></span>
+            </div>
+        </nav>
+
+    </header>
+    <div id="home" class="responsiveMobileMenu">
+        <ul class="mobileMenu flex-box" role="menubar">
+            <li class="show">
+                <a class="scroll" href="#section1" role="menuitem">
+                    <h3>Home</h3>
+                </a>
+            </li>
+            <li class="show">
+                <a class="scroll" href="#cd-timeline" role="menuitem">
+                    <h3>Proffesional life</h3>
+                </a>
+            </li>
+            <li class="show">
+                <a class="scroll" href="#section3" role="menuitem">
+                    <h3>Skills</h3>
+                </a>
+            </li>
+            <li class="show">
+                <a class="scroll" href="#section4" role="menuitem">
+                    <h3>Projects</h3>
+                </a>
+            </li>
+            <li class="show">
+                <a class="scroll" href="#section5" role="menuitem">
+                    <h3>Contact</h3>
+                </a>
+            </li>
+        </ul>
+    </div>
+
     <section class="animated">
-       <div class="header-main-nav">
-           
-       </div>
+
         <div class="main_header">
             <div class="logo_container">
                 <div class="part circle"><img src="img/Circle_LOGO1.png" alt=""></div>
@@ -169,7 +214,73 @@
             </div>
         </div>
     </section>
-     <script src="script.js"></script>
+
+    <section id="cd-timeline" class="cd-container">
+
+
+        <div class="cd-timeline-block">
+            <div class="cd-timeline-img cd-location">
+                I
+            </div>
+
+            <div class="cd-timeline-content">
+                <p>Blablablablalaalalaaalalalal</p>
+                <span class="cd-date">Innovation</span>
+            </div>
+        </div>
+
+        <div class="cd-timeline-block">
+            <div class="cd-timeline-img cd-location">
+                T
+            </div>
+
+            <div class="cd-timeline-content">
+                <p>Blablablablalaalalaaalalalal</p>
+                <span class="cd-date">Technology</span>
+            </div>
+        </div>
+
+        <div class="cd-timeline-block">
+            <div class="cd-timeline-img cd-location">
+                D
+            </div>
+
+            <div class="cd-timeline-content">
+                <p>Blablablablalaalalaaalalalal</p>
+                <span class="cd-date">Development</span>
+            </div>
+        </div>
+
+        <div class="cd-timeline-block">
+            <div class="cd-timeline-img cd-location">
+                O
+            </div>
+
+            <div class="cd-timeline-content">
+                <p>Blablablablalaalalaaalalalal</p>
+                <h4></h4>
+                <p></p>
+                <span class="cd-date">Original</span>
+            </div>
+        </div>
+
+        <div class="cd-timeline-block">
+            <div class="cd-timeline-img cd-location">
+                T
+            </div>
+
+            <div class="cd-timeline-content">
+                <p>Blablablablalaalalaaalalalal</p>
+                <span class="cd-date">Trend</span>
+            </div>
+        </div>
+
+    </section>
+    <script src="lib/jquery.min.js"></script>
+    <script src="lib/transition.js"></script>
+    <script src="lib/bootstrap.min.js"></script>
+    <script src="lib/wow.min.js"></script>
+    <script src="js/main.js"></script>
 </body>
 
 </html>

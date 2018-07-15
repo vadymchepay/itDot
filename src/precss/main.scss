@@ -1,0 +1,29 @@
+//abstracts
+@import 'abstracts/variables';
+@import 'abstracts/mixins';
+@import 'abstracts/functions';
+
+
+//Base styles
+
+
+@import 'normalize';
+//@import 'fonts';
+//@import 'base';
+
+//Elements
+
+//@import 'elements/preloader';
+
+//Sections
+
+@import 'sections/header';
+@import 'sections/animated';
+@import 'sections/timeline';
+
+
+
+//Media
+
+//@import 'media';
+

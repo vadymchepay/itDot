@@ -1,0 +1,492 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.main_header {
+    width: 100%;
+    height: 100vh;
+    background-image: url(img/main_bg2.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    overflow: hidden;
+    position: relative;
+
+}
+
+.logo_container {
+    max-width: 27.45%;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+}
+
+@media screen and (max-width: 1366px) {
+    .logo_container {
+        transform: translate(-50%, -50%) scale(0.7, 0.7);
+    }
+}
+
+.part {
+    display: inline-block;
+    position: absolute;
+
+}
+
+
+.circle {
+    margin-top: -232px;
+    margin-left: -232px;
+    z-index: 1;
+    animation: rotLeft 240s linear infinite;
+}
+
+.dots {
+    margin-top: -264px;
+    margin-left: -264px;
+    z-index: 2;
+    animation: rotRight 200s linear infinite;
+}
+
+.logo {
+    transform: translate(-50%, -50%);
+    z-index: 3;
+}
+
+@keyframes rotLeft {
+    0% {
+        transform: rotate(0);
+    }
+    25% {
+        transform: rotate(90deg);
+    }
+    50% {
+        transform: rotate(180deg);
+    }
+    75% {
+        transform: rotate(270deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes rotRight {
+    0% {
+        transform: rotate(0);
+    }
+    25% {
+        transform: rotate(-90deg);
+    }
+    50% {
+        transform: rotate(-180deg);
+    }
+    75% {
+        transform: rotate(-270deg);
+    }
+    100% {
+        transform: rotate(-360deg);
+    }
+}
+
+.objects {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    z-index: 1;
+}
+
+.object {
+    position: absolute;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.object_move {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.object img {
+    width: 100%;
+    height: 100%;
+}
+
+.object_move .obj_img {
+    position: absolute;
+}
+
+.object_move .obj_img img {
+    width: 100%;
+    height: 100%;
+}
+
+.bubbub {
+    transform: scale(0, 0);
+}
+
+.double_bubble {
+    max-width: 17.19%;
+    max-height: 29.42%;
+    top: 2.51%;
+    left: 21.88%;
+
+}
+
+.bubble2 {
+    max-width: 8.07%;
+    max-height: 14.43%;
+    top: 23.37%;
+    left: 14.01%;
+
+}
+
+.bubble3 {
+    max-width: 3.91%;
+    max-height: 7.08%;
+    top: 53.81%;
+    left: 19.38%;
+
+}
+
+.bubble4 {
+    max-width: 4.64%;
+    max-height: 8.66%;
+    top: 56.98%;
+    left: 17.60%;
+
+}
+
+.bubble5 {
+    max-width: 12.03%;
+    max-height: 22.25%;
+    top: 57.82%;
+    left: 10.31%;
+
+}
+
+.bubble6 {
+    max-width: 11.93%;
+    max-height: 21.41%;
+    top: 75.03%;
+    left: 27.92%;
+
+}
+
+.bubble7 {
+    max-width: 5.78%;
+    max-height: 10.34%;
+    top: 11.73%;
+    left: 80.26%;
+
+}
+
+.bubble8 {
+    max-width: 1.82%;
+    max-height: 3.07%;
+    top: 36.12%;
+    left: 76.72%;
+}
+
+.cosmonaut {
+    max-width: 136px;
+    max-height: 143px;
+    top: 64.80%;
+    left: 60.83%;
+    z-index: 3
+}
+
+.rocket {
+    max-width: 64px;
+    max-height: 84px%;
+    top: 54.19%;
+    left: 71.82%;
+    z-index: 2
+}
+
+.ufo {
+    max-width: 82px;
+    max-height: 46px;
+    top: 53.63%;
+    left: 12.45%;
+    z-index: 3
+}
+
+.planet {
+    max-width: 11.93%;
+    max-height: 17.13%;
+    bottom: 4.84%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 3;
+}
+
+
+.meteors {
+    max-width: 23.18%;
+    max-height: 31.10%;
+    top: 15.92%;
+    left: 68.33%;
+}
+
+.second_screen {
+    margin-top: -1px;
+    width: 100%;
+    height: 100vh;
+    background-image: url(img/second_bg.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+}
+
+.logo_3d {
+    max-width: 100%;
+    max-height: 100%;
+
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 2;
+}
+
+.logo_3d img {
+    width: 100%;
+    height: 100%;
+}
+
+.people {
+    width: 70.68%;
+    height: 92.41%;
+
+    overflow: hidden;
+    position: absolute;
+    top: 50%;
+    left: 47%;
+    transform: translate(-50%, -50%);
+    z-index: 3;
+}
+
+.people img {
+    width: 100%;
+    height: 100%;
+}
+
+.screens {
+    position: absolute;
+    width: 9.48%;
+    height: 8.61%;
+    top: 10.5%;
+    left: 77.5%;
+
+}
+
+.screens svg {
+    width: 100%;
+    height: 100%;
+}
+
+#screen_2 {
+    animation: moveRight1 6s linear infinite;
+    
+
+}
+
+@keyframes moveRight1 {
+    0% {
+        transform: translate(12px, 7px);
+    }   
+    
+    20% {
+        transform: translate(12px, 7px);
+    }
+
+    40% {
+        transform: translate(78.676441px, 13.020000px);
+    }
+    60% {
+        transform: translate(78.676441px, 13.020000px);
+    }
+    80% {
+        transform: translate(78.676441px, 13.020000px);
+    }
+    100% {
+        transform: translate(12px, 7px);
+    }
+}
+
+.screen_3 {
+    animation: moveRight2 6s linear infinite;
+    
+
+}
+
+@keyframes moveRight2 {
+    0% {
+        transform: translate(14px, 9px);
+    }  
+    20% {
+        transform: translate(14px, 9px);
+    }
+
+    40% {
+        transform: translate(141.142857px, 19.530000px);
+    }
+    60% {
+        transform: translate(141.142857px, 19.530000px);
+    }
+    80% {
+        transform: translate(141.142857px, 19.530000px);
+    }
+    100% {
+        transform: translate(14px, 9px);
+    }
+}
+
+
+
+.lamp {
+    position: absolute;
+    width: 1.72%;
+    height: 3.24%;
+    top: 4%;
+    left: 24%;
+}
+
+
+.lamp svg {
+    width: 100%;
+    height: 100%;
+}
+
+.lamp_inner {
+    animation: shine 6s linear infinite;
+}
+
+@keyframes shine {
+    0% {
+        fill: #FFF;
+    }  
+    
+    49% {
+        fill: #FFF;
+    }   
+    
+    50% {
+        fill: #FFF18B;
+    }  
+    100% {
+        fill: #FFF18B;
+    }
+}
+
+.lamp_shining {
+    animation: lamp_shine 6s linear infinite;
+}
+
+@keyframes lamp_shine {
+    0% {
+        opacity: 0;
+    }  
+    
+    49% {
+        opacity: 0;
+    }   
+    
+    50% {
+        opacity: 1;
+    }  
+    100% {
+        opacity: 1;
+    }
+}
+
+.wheel_1 {
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    top: 6.2%;
+    left: 26.3%;
+
+
+}
+
+.wheel_1 img {
+    width: 100%;
+    height: 100%;
+    animation: rotLeft 8s linear infinite;
+}
+
+.wheel_2 {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    top: 5%;
+    left: 27.3%;
+
+
+}
+
+.wheel_2 img {
+    width: 100%;
+    height: 100%;
+    animation: rotRight 8s linear infinite;
+}
+
+.message {
+    position: absolute;
+    width: 1.61%;
+    height: 3.8%;
+    top: 34.5%;
+    left: 30.5%;
+    z-index: 4;
+    animation: new_msg 5s linear infinite;
+
+}
+
+.message img {
+    width: 100%;
+    height: 100%;
+}
+
+@keyframes new_msg {
+    0% {
+        top: 39.5%;
+        opacity: 0;
+    }
+    
+    15% {
+        top: 37.5%;
+        opacity: 0.5;
+    }    
+    30% {
+        top: 34.5%;
+        opacity: 1;
+    }    
+    90% {
+        top: 34.5%;
+        opacity: 1;
+    }
+    
+    100% {
+        top: 34.5%;
+        opacity: 0;
+    }
+    
+    
+}
+
+
+
