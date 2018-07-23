@@ -376,7 +376,7 @@ header {
       top: 50%;
       right: 0;
       height: 3px;
-      background: #f9f9f9;
+      background: #9966ff;
       transition: width 0.25s ease; }
       header .menu-btn-wrapper span:first-child {
         width: 100%;
@@ -865,7 +865,7 @@ Main components
     left: 18px;
     height: 100%;
     width: 4px;
-    background: #d7e4ed; }
+    background: #3399ff; }
 
 @media only screen and (min-width: 1170px) {
   #cd-timeline {
@@ -900,7 +900,10 @@ Main components
   left: 0;
   width: 40px;
   height: 40px;
-  box-shadow: 0 0 0 2px #000, inset 0 2px 0 rgba(0, 0, 0, 0.08), 0 3px 0 4px rgba(0, 0, 0, 0.05); }
+  border: 2px solid #3399ff;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
   .cd-timeline-img.cd-picture, .cd-timeline-img.cd-movie, .cd-timeline-img.cd-location {
     background: #fff;
     color: #000; }
@@ -911,6 +914,9 @@ Main components
     line-height: 60px;
     text-transform: uppercase;
     text-align: center; }
+  .cd-timeline-img img {
+    width: 40px;
+    height: 40px; }
 
 .is-hidden {
   visibility: hidden; }
@@ -993,7 +999,7 @@ Main components
   padding: 1em;
   /* box-shadow: 0 3px 0 #d7e4ed; */
   color: #000;
-  border: 1px solid #000;
+  border: 2px solid #3399ff;
   /* font-size: 14px; */ }
 
 .cd-timeline-content:after {
@@ -1041,7 +1047,7 @@ Main components
   height: 0;
   width: 0;
   border: 7px solid transparent;
-  border-right: 7px solid white; }
+  border-right: 7px solid #3399ff; }
 
 @media only screen and (min-width: 768px) {
   .cd-timeline-content h2 {
@@ -1071,7 +1077,7 @@ Main components
     top: 24px;
     left: 100%;
     border-color: transparent;
-    border-left-color: #000; }
+    border-left-color: #3399ff; }
   .cd-timeline-content .cd-read-more {
     float: left; }
   .cd-timeline-content .cd-date {
@@ -1088,7 +1094,7 @@ Main components
     left: auto;
     right: 100%;
     border-color: transparent;
-    border-right-color: #000; }
+    border-right-color: #3399ff; }
   .cd-timeline-block:nth-child(even) .cd-timeline-content .cd-read-more {
     float: right; }
   .cd-timeline-block:nth-child(even) .cd-timeline-content .cd-date {
@@ -1197,7 +1203,7 @@ Main components
 /* Skills page
 --------------------------------------------------------------------------------*/
 .skills-page {
-  background: #EFF1F4;
+  background: #3399ff;
   overflow: hidden;
   padding-bottom: 30px; }
   .skills-page .tiles-container {
@@ -1206,14 +1212,16 @@ Main components
     padding: 0 25px;
     margin: 15px 0;
     border-radius: 0 !important;
-    color: #333333;
+    color: #fff;
     text-align: center; }
     .skills-page .tile h2 {
-      color: #333333; }
+      color: #fff;
+      text-transform: uppercase; }
     .skills-page .tile h4 {
-      color: #333333; }
+      color: #fff;
+      text-transform: uppercase; }
     .skills-page .tile p {
-      color: #333333; }
+      color: #fff; }
   .skills-page .section-header {
     background: transparent; }
   .skills-page .skills-wrap {
@@ -1221,7 +1229,7 @@ Main components
     animation-duration: 1s;
     animation-delay: 0.5s; }
     .skills-page .skills-wrap .skills-content {
-      border: 1px solid #f9f9f9;
+      border: 1px solid #66ccff;
       box-shadow: rgba(0, 0, 0, 0.13) 0 5px 10px;
       padding: 5px; }
       .skills-page .skills-wrap .skills-content > i {
@@ -1237,6 +1245,31 @@ Main components
       max-width: 629px;
       height: auto;
       margin: 0 auto; }
+
+.contacts-links {
+  padding: 20px 0 60px 0; }
+  .contacts-links .link-title {
+    color: #3399ff;
+    text-transform: uppercase;
+    padding: 20px 0;
+    text-align: center;
+    font-weight: 700; }
+  .contacts-links .contact-lnk-btn {
+    display: block;
+    width: 190px;
+    height: 40px;
+    line-height: 35px;
+    margin: 0 auto;
+    color: #3399ff;
+    text-decoration: none;
+    text-align: center;
+    flex-wrap: 700;
+    border: 2px solid #3399ff;
+    border-radius: 0.25em;
+    transition: 0.5s; }
+    .contacts-links .contact-lnk-btn:hover {
+      background-color: #3399ff;
+      color: #fff; }
 
 .l-message {
   position: relative;
