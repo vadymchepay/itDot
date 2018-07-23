@@ -36,4 +36,96 @@
   background: url(unquote($img-url + $img-title)) no-repeat;
 }
 
+@mixin css3-prefix($property, $value) {
+	-webkit-#{$property}: #{$value};
+//	-khtml-#{$property}: #{$value};
+	-moz-#{$property}: #{$value}; 
+//	-ms-#{$property}: #{$value};
+	-o-#{$property}: #{$value}; 
+	#{$property}: #{$value};
+}
+
+@mixin respond-to($media) {
+	// width < 768px
+	@if $media == xs {
+		@media only screen and (max-width: $screen-xs-max) {
+			@content;
+		}
+	}
+	// width > 768px
+	@if $media == sm {
+		@media only screen and (min-width: $screen-sm-min) {
+			@content;
+		}
+	}
+	// width > 992px
+	@if $media == md {
+		@media only screen and (min-width: $screen-md-min) {
+			@content;
+		}
+	}
+	// width > 1200px
+	@if $media == lg {
+		@media only screen and (min-width: $screen-lg-min) {
+			@content;
+		}
+	}
+		// width: 768px - 991px
+	@else if $media == sm-min-sm-max {
+		@media only screen and (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+			@content;
+		}
+	}
+
+		// width: 992px - 1199px
+	@else if $media == md-min-md-max {
+		@media only screen and (min-width: $screen-md-min) and (max-width: $screen-md-max) {
+			@content;
+		}
+	}
+
+	// width < 992px
+	@if $media == sm-max {
+		@media only screen and (max-width: $screen-sm-max) {
+			@content;
+		}
+	}
+
+	// width < 1200px
+	@if $media == lg-min {
+		@media only screen and (max-width: $screen-lg-min) {
+			@content;
+		}
+	}
+
+	// width < 1572px
+	@if $media == 1572 {
+		@media only screen and (max-width: 1572px) {
+			@content;
+		}
+	}
+
+	// width < 479
+	@if $media == 479 {
+		@media only screen and (max-width: 479px) {
+			@content;
+		}
+	}
+}
+
+@mixin clearfix() {
+	*zoom: 1;
+	&:before,
+	&:after {
+		content: "";
+		display: table;
+	}
+	&:after {
+		clear: both;
+	}
+}
+
+@mixin border-radius($radius: 5px) {
+	@include css3-prefix('border-radius', $radius);
+}
 

@@ -1,0 +1,118 @@
+/** ============================
+    animation
+    ======================== **/
+
+//@include keyframes(animatedBackground){
+//	0% { background-position: 0 0; }
+//	100% { background-position: 1920px 0; }
+//};
+//
+//.top-line{
+//	@include animation(animatedBackground 2s linear infinite);
+//}
+//.bottom-line{
+//	@include animation(animatedBackground 2s linear infinite);
+//}
+
+
+@include keyframesAnimation(autoanomation){  
+	0% {
+		-webkit-transform: scale3d(1, 1, 1);
+		-moz-transform: scale3d(1, 1, 1);
+		-o-transform: scale3d(1, 1, 1);
+		-ms-transform: scale3d(1, 1, 1);
+		transform: scale3d(1, 1, 1);
+	}
+	50% {
+		-webkit-transform: scale3d(1.05, 1.05, 1.05);
+		-moz-transform: scale3d(1.05, 1.05, 1.05);
+		-o-transform: scale3d(1.05, 1.05, 1.05);
+		-ms-transform: scale3d(1.05, 1.05, 1.05);
+		transform: scale3d(1.05, 1.05, 1.05);
+	}
+	100% {
+		-webkit-transform: scale3d(1, 1, 1);
+		-moz-transform: scale3d(1, 1, 1);
+		-o-transform: scale3d(1, 1, 1);
+		-ms-transform: scale3d(1, 1, 1);
+		transform: scale3d(1, 1, 1);
+	}
+};
+.auto-animation{
+	@include animation(autoanomation 5s ease-in-out infinite);
+}
+ 
+@include keyframesAnimation(wave){
+    0% {
+        @include css3-prefix(transform, rotateZ(0deg) translate3d(0,5%,0) rotateZ(0deg));
+    }
+    100% {
+        @include css3-prefix( transform, rotateZ(360deg) translate3d(0,5%,0) rotateZ(-360deg));
+    }
+}
+
+@include keyframesAnimation(translate){
+    65% {        
+        @include css3-prefix(transform, translateY(-30px));
+    }
+    90% {      
+        @include css3-prefix(transform, translateY(10px));
+    }
+}
+
+@include keyframesAnimation(rotate){
+    0% {    
+        @include css3-prefix(transform, rotateY(0deg));
+    }
+    100% {       
+        @include css3-prefix(transform, rotateY(360deg));
+    }
+}
+
+@include keyframesAnimation(rotateSmall){
+    30% {      
+        @include css3-prefix(transform, rotate(-10deg));
+    }
+    65% {       
+        @include css3-prefix(transform, rotate(10deg));
+    }
+}
+
+@include keyframesAnimation(scale){
+    65% {    
+        @include css3-prefix(transform, scale(1.1));
+    }
+    90% {        
+        @include css3-prefix(transform, scale(0.75));
+    }
+}
+
+@include keyframesAnimation(foo){
+    30% {       
+        @include css3-prefix(transform, rotateZ(-50deg));
+    }
+    65% {
+        @include css3-prefix(transform, rotateZ(20deg));
+    }
+    90% {     
+        @include css3-prefix(transform, rotateZ(0deg));
+    }
+}
+
+@include keyframesAnimation(foo2){
+    30% {       
+        @include css3-prefix(transform, rotateZ(-20deg));
+    }
+    65% { 
+        @include css3-prefix(transform, rotateZ(100deg));
+    }
+    90% {        
+        @include css3-prefix(transform, rotateZ(0deg));
+    }
+} 
+
+
+
+
+
+ 

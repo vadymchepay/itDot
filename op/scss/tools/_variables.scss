@@ -1,0 +1,37 @@
+$font-Light: "GothaProLig", arial, sans-serif;
+$font-Bold: "gotham_probold", arial, sans-serif;
+$font-ExtraBold: "open_sansextrabold", arial, sans-serif;
+$font-Otakoyi: "otakoyi";
+
+$font: $font-Light;
+$font-2: $font-Light;
+
+$color-bg: #001227;
+
+$color: #000;
+$color-1: #ffdb00;
+$color-2: #001227;
+$color-3: #485770;  
+$color-4: #22ace4;
+$color-5: #ff4f4f;
+
+
+
+
+$color-p: $color-3;
+$color-h: $color-2;
+$color-a: $color-1;
+$color-a-hover: $color-1;
+$color-a-border: #ffd400;
+
+$image_dir: '../img/';
+
+$screen-xs-max: 767px;
+$screen-sm-min: 768px;
+$screen-sm-max: 991px;
+$screen-md-min: 992px;
+$screen-md-max: 1199px;
+$screen-lg-min: 1200px;
+
+$browser-context: 16;
+

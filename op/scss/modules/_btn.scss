@@ -1,0 +1,191 @@
+/** ============================
+    btn
+    ======================== **/
+.btn {
+	padding: em(22,30) em(57,30);
+	position: relative;
+	font-family: $font-Bold;
+	background: transparent;
+	font-size: em(30);
+	line-height: lh(30, 30);
+	@include transition();
+//	font-size:inherit;
+//	line-height: 0.74rem;
+	cursor: pointer;
+	border: 3px solid #000;
+	text-transform: uppercase;
+	@extend %inline-block;
+	@include border-radius(5px);
+    @include respond-to(xs){
+        font-size: 17px; 
+    }
+	span {
+		position: relative;
+		color: #000;
+		vertical-align: middle;
+		@include css3-prefix(transition, all 0.2s ease-out 0s);
+		left: 0;
+		&:before{
+			font-size: em(25);
+			position: absolute;
+			font-family: $font-Otakoyi;
+			content: "\e602";
+			line-height: 0.68; 
+			color: $color-1;
+			right: 0;
+			opacity: 0;
+			@include css3-prefix(transition, all 0.2s ease-out 0s);
+		}
+	}
+	&.btn-portfolio{
+		span{
+			&:before{
+
+				content: "\e600";
+			}
+		}
+		&:hover{
+			span{
+				left: em(-30, 30);
+				&:before{
+					opacity: 1;
+					right: em(-40, 30);
+				}
+			}
+		}
+	}
+	&.btn-more{
+		span{
+			&:before{
+				content: "\e607";
+			}
+		}
+		&:hover{
+			span{
+				left: em(-30, 30);
+				&:before{
+					opacity: 1;
+					right: em(-40, 30);
+				}
+			}
+		}
+	}
+	&.btn-watch{
+		span{
+			&:before{
+				content: "\e601";
+			}
+		}
+		&:hover{
+			span{
+				left: em(-30, 30);
+				&:before{
+					opacity: 1;
+					right: em(-40, 30);
+				}
+			}
+		}
+	}
+    &.btn-move{
+		span{
+			&:before{
+				content: "\e607";
+			}
+		}
+		&:hover{
+			span{
+				left: em(-30, 30);
+				&:before{
+					opacity: 1;
+					right: em(-40, 30);
+				}
+			}
+		}
+	}
+	&.btn-letter{
+		span{
+			&:before{
+				content: "\e603";
+			}
+		}
+		&:hover{
+			span{
+				left: em(-30, 30);
+				&:before{
+					opacity: 1;
+					right: em(-40, 30);
+				}
+			}
+		}
+	}
+	&:hover {
+        span{
+            color: #000;
+            &:before{
+                color: #000;
+            }
+        }
+	}
+	&:active {
+		background: #000;
+		span{
+			color: #fff;
+			&:before{
+				color: $color-1;
+			}
+		}
+	}
+	&.btn-white {
+		border: 3px solid #fff;
+		span {
+			color: #fff;
+		}
+		&:hover {
+            span{
+                color: #fff;
+                &:before{
+                    color: $color-1;
+                }
+            }
+		}
+		&:active {
+			border: 3px solid $color-1;
+			background: $color-1;
+			span{
+				color: #000;
+				&:before{
+					color: #000;
+				}
+			}
+		}
+	}
+	&.btn-small{
+		font-size: 24px; 
+		padding: em(14, 24) em(56, 24);
+		&:hover {
+			span{
+				left: em(-24, 30);
+				&:before{
+					opacity: 1;
+					right: em(-40, 30);
+				}
+			}
+		}
+	}
+    &.btn-yellow{
+        background: $color-1;
+        border: 3px solid $color-1;
+        &:hover, &:active{
+            background: #000;
+            border: 3px solid #000;
+            span{
+                color: #fff;
+                &::before{
+                    color: #fff;
+                }
+            }
+        }
+    }
+}
+
+

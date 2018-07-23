@@ -1,0 +1,68 @@
+/* ======================
+   Layout/responsive
+   ======================= */
+
+
+
+// < 768px - 991px
+@include respond-to(sm-min-sm-max){
+	html {
+//		font-size: 35%;
+	}
+}
+// < 1200
+
+// > 1600
+@media (min-width: 1600px) {
+	html {
+//		font-size: 62.5%;
+	}
+}
+
+// < 768
+@include respond-to(xs){
+	body {
+		font-size: 7px !important;
+	}
+	div[class^="col-"] {
+		padding: 0 15px;
+	}
+}
+@include respond-from-to(767px, 769px){
+	body {
+		font-size: 7.68px !important;
+	}
+}
+@include respond-from-to(799px, 801px){
+	body {
+		font-size: 8px !important;
+	}
+}
+@include respond-from-to(979px, 981px){
+	body {
+		font-size: 9.8px !important;
+	}
+}
+@include respond-from-to(1023px, 1025px){
+	body {
+		font-size: 10.24px !important;
+	}
+}
+@include respond-from-to(1279px, 1281px){
+	body {
+		font-size: 12.8px !important;
+	}
+}
+@include respond-from-to(1367px, 1369px){
+	body {
+		font-size: 13.68px !important;
+	}
+}
+
+@include respond-to(lg){
+
+	.l-page-blog {
+		font-size: 16px;
+	}
+}
+

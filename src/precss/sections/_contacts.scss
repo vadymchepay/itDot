@@ -1,0 +1,232 @@
+.contacts {
+    width: 100%;
+    .contacts-img {
+        width: 100%;
+        padding: 20px 0;
+        img {
+            display: block;
+            max-width: 629px;
+            height: auto;
+            margin: 0 auto;
+        }
+    }
+}
+
+.l-message {
+    position: relative;
+    padding-bottom: 50em;
+    .message-wrapper {
+        &.flipped {
+            &:before {
+                display: none;
+            }
+            .mask {
+                position: absolute;
+                z-index: 1;
+                @include css3-prefix(transform, rotateX(-180deg));
+            }
+            .message {
+                position: relative;
+                z-index: 3;
+                @include css3-prefix(transform, rotateX(0deg));
+                .btn {
+                    &:hover {
+                        span:before {
+                            color: #000;
+                        }
+                    }
+                }
+            }
+        }
+        .mask,
+        .message {
+            width: 100%;
+            height: 100%;
+            left: 0;
+            top: 0;
+            -webkit-backface-visibility: hidden;
+            /* Chrome, Safari, Opera */
+            backface-visibility: hidden;
+            overflow: hidden;
+            -webkit-transform-style: preserve-3d;
+            transform-style: preserve-3d;
+            -webkit-transition: transform 0.4s ease-in-out 0s, z-index 0.4s ease-in-out 0s;
+            -moz-transition: transform 0.4s ease-in-out 0s, z-index 0.4s ease-in-out 0s;
+            -o-transition: transform 0.4s ease-in-out 0s, z-index 0.4s ease-in-out 0s;
+            transition: transform 0.4s ease-in-out 0s, z-index 0.4s ease-in-out 0s;
+        }
+    }
+    .table-cell {
+        position: relative;
+        overflow: hidden;
+    }
+    .mask {
+        display: block;
+        text-align: center;
+        position: absolute;
+        z-index: 2;
+        top: 0;
+        left: 0;
+        background: $color-1;
+        @include css3-prefix(transform, rotateX(0deg));
+        @include respond-to(xs) {
+            display: none;
+        }
+        .btn {
+            span:before {
+                color: #000;
+            }
+        }
+    }
+    .message_form {
+        padding-top: em(120);
+        z-index: 1;
+        text-align: center;
+        width: 100%;
+//        @include css3-prefix(transform, rotateX(-180deg));
+        @include respond-to(xs) {
+            @include css3-prefix(transform, rotateX(0deg));
+        }
+    }
+    .container-message {
+        max-width: 973px;
+        margin: 0 auto;
+        width: 100%;
+        .row {
+            position: relative;
+            margin: 0 0 35px 0;
+        }
+    }
+    input,
+    textarea {
+        border: 2px solid #bfccdf;
+        @include border-radius(3px);
+        background: #fff;
+        height: 55px;
+        line-height: 1;
+        padding-left: 19px;
+        padding-right: 19px;
+        width: 100%;
+        max-width: 539px;
+        font-family: $font-Bold;
+        color: $color-2;
+        &:hover,
+        &:active,
+        &:focus {
+            border: 2px solid $color-1;
+            background: $color-1;
+        }
+    }
+    textarea {
+        height: 135px;
+        padding-top: 10px;
+        padding-bottom: 15px;
+    }
+    label {
+        color: #393f50;
+        font-size: 20px;
+        left: 0;
+        line-height: 55px;
+        position: absolute;
+        text-align: right;
+        display: block;
+        width: 185px;
+        height: 55px;
+    }
+    .form-group {
+        margin-bottom: 35px;
+    }
+    .conrol {
+        text-align: left;
+        width: 100%;
+        margin: 0 auto;
+        max-width: 539px;
+        @include clearfix();
+        input {
+            width: 139px;
+            padding: 0 em(15);
+            display: inline-block;
+            zoom: 1;
+            vertical-align: middle;
+            margin-right: 15px;
+        }
+        img {
+            display: inline-block;
+            zoom: 1;
+            vertical-align: middle;
+        }
+        button {
+            display: inline-block;
+            zoom: 1;
+            vertical-align: middle;
+            font-size: 24px;
+            line-height: 1;
+            padding: 16px em(50, 24);
+            background: $color-1;
+            font-family: $font-Bold;
+            border: none;
+            color: #000;
+            span:before {
+                color: #000;
+            }
+            &:hover {}
+            &:active {}
+            @include respond-to(md) {
+                float: right;
+            }
+        }
+    }
+    .icon-remove {
+        position: absolute;
+        top: 40px;
+        right: 40px;
+        width: 50px;
+        height: 50px;
+        display: block;
+        font-size: 50px;
+        color: #212121;
+        @include css3-prefix(transition, all 0.35s cubic-bezier(0.6, -0.28, 0.74, 0.05));
+        cursor: pointer;
+        @include css3-prefix(transform, rotate(0deg));
+        &:hover {
+            @include css3-prefix(transform, rotate(270deg));
+            color: $color-1;
+        }
+        @include respond-to(xs) {
+            display: none;
+        }
+    }
+    @include respond-to(sm-max) {
+        .icon-remove {
+            top: 20px;
+            right: 20px;
+            font-size: 30px;
+            width: 30px;
+            height: 30px;
+        }
+        .conrol {
+            button {
+                margin-top: 20px;
+                margin-left: 0;
+            }
+        }
+        label {
+            top: -25px;
+            text-align: left;
+            line-height: 20px;
+            height: 20px;
+            font-size: 16px;
+            padding-left: 15px;
+        }
+        .container-message {
+            max-width: 469px;
+        }
+        input,
+        textarea {
+            max-width: none;
+        }
+        .row {
+            padding: 0 15px;
+        }
+    }
+}

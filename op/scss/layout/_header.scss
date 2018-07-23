@@ -1,0 +1,490 @@
+header{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1001;
+    width: 100%;
+    .top-line{
+        @include clearfix();
+        padding: 0 15px;
+        .site-logo{
+            float: left;
+            padding: 11px 0;
+            display: block;
+            @include clearfix();
+            svg{
+                float: left;
+                display: block;
+                width: 38px;
+                height: 38px;
+                &.sm{
+                    display: none;
+                }
+            }
+            .logo-label{
+                float: left;
+                display: block;
+                line-height: 38px;
+                font-size: 22px;
+                font-family: $font-Bold;
+                padding: 0 0 0 15px;
+            }
+            @media(max-width: 991px){
+                padding: 0;
+                svg{
+                    &.lg{
+                        display: none;
+                    }
+                    &.sm{
+                        display: block;
+                    }
+                }
+                .logo-label{
+                    font-size: 18px;
+                }
+            }
+        }
+        .top-nav{
+//            overflow: auto;
+            float: right;
+            & > ul{
+                @include clearfix();
+                & > li{
+                    float: left;
+                    & > a,
+                    & > span{
+                        font-size: 16px;
+                        font-family: $font-Bold;
+                        display: block;
+                        padding: 22px 10px;
+                        text-decoration: none;
+                        &:hover{
+                            box-shadow: 0 60px 0 0 #f5da33 inset;
+                            color: #111722;
+                            @media (max-width: 991px){
+                                box-shadow: none !important;
+                                color: #111722;
+                                background: none !important;
+                            }
+                        }
+                        &.active{
+                            box-shadow: 0 4px 0 0 #f5da33 inset;
+                            color: #111722;
+                            @media (max-width: 991px){
+                                box-shadow: none !important;
+                                color: #111722;
+                                background: #f5da33;
+                            }
+                        }
+                    }
+                    .header-btn{
+                        border: 2px solid #607995;
+                        display: inline-block;
+                        line-height: 22px;
+                        padding: 7px 28px;
+                        border-radius: 4px;
+                        margin: 9px 10px;
+                        &.active{
+                            background: #f5da33;
+                        }
+                    }
+                    & > .language{
+                        @include clearfix();
+                        padding: 11px 0;
+                        & > li{
+                            margin: 9px 5px;
+                            float: left;
+                            & > a,
+                            & > span{
+                                padding: 0 !important;
+                                font-size: 12px;
+                                text-transform: uppercase;
+                                color: #607995 !important;
+                                font-family: $font-Bold;
+                                border-bottom: 2px solid transparent !important;
+                                &:hover{
+                                    background: transparent;
+                                }
+                            }
+                            &.active > a{
+                                color: #f5da33 !important;
+                                border-bottom: 2px solid #f5da33 !important;
+                            }
+                            &.active > .link{
+                                color: #f5da33 !important;
+                                border-bottom: 2px solid #f5da33 !important;
+                                background: transparent !important;
+                            }
+                        }
+                    }
+                    & > .dropdown{
+                        &.showDrop{
+                            display: block;
+                            overflow-y: auto;
+                            max-height: 185px;
+                        }
+                        & > .close-nav{
+                            @media(max-width: 991px){
+                                display: none;
+                            }
+                            position: absolute;
+                            cursor: pointer;
+                            top: 2px;
+                            right: 30px;
+                            width: 32px;
+                            height: 32px;
+                            z-index: 9;
+                            &:before,
+                            &:after{
+                                transition: all .3s ease;
+                                content:'';
+                                display: block;
+                                width: 32px;
+                                height: 3px;
+                                background: #607995;
+                                position: absolute;
+                            }
+                            &:after{
+                                top: 14px;
+                                -webkit-transform: rotate(-45deg);
+                                -moz-transform: rotate(-45deg);
+                                transform: rotate(-45deg);
+                            }
+                            &:before{
+                                bottom: 14px;
+                                -webkit-transform: rotate(45deg);
+                                -moz-transform: rotate(45deg);
+                                transform: rotate(45deg);
+                            }
+                            &:hover{
+                                &:before{
+                                    background: #f5da33;
+                                    -webkit-transform: rotate(-45deg);
+                                    -moz-transform: rotate(-45deg);
+                                    transform: rotate(-45deg);
+
+                                }
+                                &:after{
+                                    background: #f5da33;
+                                    -webkit-transform: rotate(45deg);
+                                    -moz-transform: rotate(45deg);
+                                    transform: rotate(45deg);
+                                }
+                            }
+                        }
+                        display: none;
+                        left: 0;
+                        width: 100%;
+                        z-index: 99;
+                        background: #050607;
+                        padding: 8px;
+                        @media (min-width: 992px) {
+                            position: absolute;
+                            padding: 20px 15px;
+//                            overflow: auto;
+                        }
+                        .row{
+                            @include clearfix();
+                            margin: 0;
+                            .col{
+                                float: left;
+                                width: 50%;
+                                padding: 15px;
+                                @media(max-width: 767px){
+                                    width: 100%;
+                                    padding: 7px;
+                                }
+                                .nav-item{
+                                    border: none !important;
+                                    @media (min-width: 992px){
+                                        transition: all .3s;
+                                        max-height: 270px;
+                                    }
+                                    position: relative;
+                                    display: block;
+                                    width: 100%;
+                                    overflow: hidden;
+                                    max-height: 150px;
+                                    .image{
+                                        overflow: hidden;
+                                        height: 100%;
+                                        img{
+                                            width: 100%;
+                                            height: 100%;
+                                            display: block;
+                                            transition: all 1.2s ease;
+                                        }
+                                    }
+                                    .item-content{
+                                        padding: 30px;
+                                        position: absolute;
+                                        text-align: center;
+                                        top: 0;
+                                        left: 0;
+                                        width: 100%;
+                                        height: 100%;
+                                        @media(max-width: 991px){
+                                            top: -30px;
+                                            left: -30px;
+                                            width: calc(100% + 60px);
+                                            height: calc(100% + 60px);
+                                        }
+                                        .table-cell{
+                                            padding: 0 30px;
+                                        }
+                                        span{
+                                            font-size: 32px;
+                                            color: #fff;
+                                            line-height: 38px;
+                                            font-family: $font-Bold;
+                                            transition: all .5s ease;
+                                            border: none;
+                                            @media (max-width: 991px){
+                                                font-size: 20px;
+                                                line-height: 28px;
+                                            }
+                                        }
+                                        .border{
+                                            position: absolute;
+                                            background: #dfc833;
+                                            transition: all .5s ease;
+                                            &.top{
+                                                top: 30px;
+                                                width: 0;
+                                                height: 3px;
+                                            }
+                                            &.bottom{
+                                                bottom: 30px;
+                                                right: 30px;
+                                                width: 0;
+                                                height: 3px;
+                                            }
+                                            &.left{
+                                                top: 30px;
+                                                left: 30px;
+                                                height: 0;
+                                                width: 3px;
+                                            }
+                                            &.right{
+                                                bottom: 30px;
+                                                right: 30px;
+                                                height: 0;
+                                                width: 3px;
+                                            }
+                                        }
+                                    }
+                                    &:hover{
+                                        background: transparent;
+                                        .image{
+                                            img{
+                                                @include css3-prefix('transform','scale(1.2)');
+                                            }
+                                        }
+                                        .item-content{
+                                            .border{
+                                                &.top{
+                                                    width: calc(100% - 60px);
+                                                }
+                                                &.bottom{
+                                                    width: calc(100% - 60px);
+                                                }
+                                                &.right{
+                                                    height: calc(100% - 60px);
+                                                }
+                                                &.left{
+                                                    height: calc(100% - 60px);
+                                                }
+                                            }
+                                            span{
+                                                color: #dfc833;
+                                                display: inline;
+                                                &:hover{
+                                                    background: transparent;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            @media(max-width: 991px){
+//                max-height: 442px;
+                display: none;
+                position: absolute;
+                top:38px;
+                left: 0;
+                width:100%;
+                background: #06111e;
+                & > ul{
+                    & > li{
+                        float: none;
+                        & > a,
+                        & > span{
+                            text-align: center;
+                            font-size: 30px;
+                            color: #fff !important;
+                            border-bottom: 2px solid #33455a;
+                            padding: 18px 10px !important;
+                        }
+                        &.button{
+                            display: none;
+                        }
+                        &.language-list{
+                            text-align: center;
+                            display: block !important;
+                            & > .language{
+                                display: inline-block;
+                                padding: 19px 0;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .toggle-btn{
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            margin: 0 -9px;
+            cursor: pointer;
+            float: right;
+            display: none;
+            height: 38px;
+            width: 42px;
+            padding: 11px;
+            & > span{
+                display: block;
+                height: 2px;
+                width: 20px;
+                transition: all .4s ease;
+                &.sp-2{
+                    margin: 5px 0;
+                }
+            }
+            &.active{
+                & > .sp-2{
+                    opacity: 0;
+                    -webkit-transform: translateX(-20px);
+                    -moz-transform: translateX(-20px);
+                    transform: translateX(-20px);
+                }
+                & > .sp-1{
+                    -webkit-transform: translateY(7px) rotate(-45deg);
+                    -moz-transform: translateY(7px) rotate(-45deg);
+                    transform: translateY(7px) rotate(-45deg);
+                }
+                & > .sp-3{
+                    -webkit-transform: translateY(-7px) rotate(45deg);
+                    -moz-transform: translateY(-7px) rotate(45deg);
+                    transform: translateY(-7px) rotate(45deg);
+                }
+            }
+            @media(max-width: 991px){
+                display: block;
+            }
+        }
+    }
+    &.main-page{
+        background: transparent;
+        .site-logo{
+            svg{
+                circle,
+                path{
+                    fill: #f5da33;
+                }
+            }
+            .logo-label{
+                color: #fff;
+            }
+        }
+        .top-nav{
+            & > ul > li > a,span{
+                color: #fff;
+            }
+            & > ul > li > a.active,
+            & > ul > li > span.active{
+                color: #fff;
+            }
+        }
+        .toggle-btn{
+            & > span{
+                background: #ffdb00;
+            }
+        }
+    }
+    &.secondary-page{
+        .site-logo{
+            svg{
+                circle,
+                path{
+                    fill: #111722;
+                }
+            }
+            .logo-label{
+                color: #111722;
+            }
+        }
+        background: #fff;
+        .top-nav{
+            & > ul > li > a,span{
+                color: #111722;
+            }
+        }
+        .toggle-btn{
+            & > span{
+                background: #111722;
+            }
+        }
+    }
+    &.fixed-top{
+//        box-shadow: 0 2px 3px 0 rgba(#334a71, .25);
+        position: fixed;
+        background: rgba(#fff, .9);
+        & > .top-line{
+            & > .site-logo{
+                padding: 0;
+                .sm{
+                    display: block;
+                    path,
+                    circle{
+                        fill: #111722;
+                    }
+                }
+                .lg{
+                    display: none;
+                }
+                .logo-label{
+                    color: #111722;
+                }
+            }
+            & > .top-nav{
+                & > ul > li{
+                    &.button{
+                        span,a{
+                            line-height: 16px !important;
+                            margin: 0 !important;
+                            border: none !important;
+                        }
+                    }
+                    &.language-list{
+                        display: none;
+                    }
+                    & > a,span{
+                        color: #111722;
+                        padding: 11px 10px;
+                    }
+                }
+            }
+            & > .toggle-btn{
+                & > span{
+                    background: #111722;
+                }
+            }
+        }
+    }
+}
+

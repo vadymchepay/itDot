@@ -1,0 +1,612 @@
+/** ============================
+    modules
+    ======================== **/
+.m-turd{
+	width: 31px;
+	height: 38px;
+	position: absolute;
+	background: url("../img/icons/turd.png") no-repeat;
+}
+.m-flipped{
+	overflow: hidden;
+	position: relative;
+	width: 100%;
+	height: 100%;
+	cursor: pointer;
+	&.flipped{
+		&:before{
+			display: none;
+		}
+		.flip-front{
+			position: absolute;
+			z-index: 1;
+			@include css3-prefix(transform, rotateX(-180deg));
+		}
+		.flip-back{
+			position: relative;
+			z-index: 3;
+			@include css3-prefix(transform, rotateX(0deg));
+			.btn{
+				&:hover{
+					span:before{
+						color: #000;
+					}
+				}
+			}
+		}
+	}
+	.flip-front,
+	.flip-back{
+		width: inherit;
+		height: inherit;
+		left: 0;
+		top: 0; 
+		-webkit-backface-visibility: hidden; /* Chrome, Safari, Opera */
+		backface-visibility: hidden;
+		overflow: hidden;
+		-webkit-transform-style: preserve-3d;
+		transform-style: preserve-3d;
+		-webkit-transition: transform 0.4s ease-in-out 0s, z-index 0.4s ease-in-out 0s;
+		-moz-transition: transform 0.4s ease-in-out 0s, z-index 0.4s ease-in-out 0s;
+		-o-transition: transform 0.4s ease-in-out 0s, z-index 0.4s ease-in-out 0s;
+		transition: transform 0.4s ease-in-out 0s, z-index 0.4s ease-in-out 0s;
+	}
+	.flip-front{
+		position: relative;
+		overflow: hidden;
+		@include css3-prefix(transform, rotateX(0deg));
+		z-index: 3;
+		img{
+			@include transition(2s);
+			@include css3-prefix(transform, rotate(0deg) scale(1));
+		}
+		&:hover{
+			@include transition(0.35s);
+			img{
+				@include css3-prefix(transform, rotate(-2deg) scale(1.1));
+			}
+		}
+	}
+	.flip-back{
+		position: absolute;
+		background: $color-1;
+		@include css3-prefix(transform, rotateX(-180deg));
+		z-index: 1;
+		.flip-close{
+			z-index: 10;
+			position: absolute;
+			width: 24px;
+			height: 24px;
+			top: 20px;
+			right: 20px;
+			cursor: pointer;
+			.icons{
+				display: block;
+				width: 24px;
+				height: 24px;
+				@include transition();
+				@include css3-prefix(transform, rotate(0deg));
+			}
+			&:hover{
+				.icons{
+					@include css3-prefix(transform, rotate(90deg));
+				}
+			}
+		}
+	}
+}
+.m-title-tags{
+	text-align: center;
+	padding-bottom: 47px;
+	ul{
+		@extend %inline-block;
+	}
+	li{
+
+        display: inline-block;
+        vertical-align: top;
+		line-height: lh(40, 14);
+		a{
+			display: block;
+			padding: em(12, 20) em(20, 20);
+			color: #000000;
+			font-size: em(20);
+			line-height: lh(20,20);
+			@include border-radius(5px);
+			@include transition();
+			text-transform: uppercase;
+			font-family: $font-Bold;
+			&:hover, &.active {
+				background: $color-1;
+				span {
+					background-image: none;
+
+				}
+			}
+			span{
+				@include transition();
+				@extend %inline-block;
+				line-height: em(25, 20);
+				background: url("../img/dotted.png") repeat-x 0 em(23, 20);
+			}
+		}
+		@include respond-to(xs){
+
+		}
+	}
+	@include respond-to(sm-max){
+		font-size: 14px;
+		padding-top: 20px;
+		line-height: lh(40, 14);
+	}
+    .icon-search-box{
+        @extend %inline-block;
+        .icon-lupa{
+            position: relative;
+            font-size: 32px;
+            cursor: pointer;
+            display: block;
+            margin-left: em(15);
+
+        }
+    }
+}
+#search-panel{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 99999;
+    height: 100%;
+    @include css3-prefix(transition, all 0.5s ease-in-out);
+    @include css3-prefix(transform, translate(0px, -100%) scale(0, 0));
+    opacity: 0;
+    background: $color-1;
+    &.open{
+        @include css3-prefix(transform, translate(0px, 0px) scale(1, 1));
+        opacity: 1;
+    }
+    .container{
+        position: relative;
+        height: 100%;
+        overflow: hidden;
+    }
+    .search-box{
+        position: relative;
+        max-width: 100%;
+    }
+    .container{
+        position: relative;
+    }
+    input[type="search"] {
+        width: 100%;
+        text-align: left;
+        color: #000;
+        background: $color-1;
+        font-size: 34px;
+        line-height: lh(53, 34);
+        font-family: $font-Bold;
+        border: 0;
+        margin: 0 auto;
+        margin-top: em(-51, 34);
+        padding-left: em(50, 34);
+        padding-right: em(105, 34);
+        outline: none;
+        border-bottom: 4px solid #000;
+        @include placeholder(#000, $font-Bold, 0.7);
+        @include respond-to(xs){
+            height: auto;
+            font-size: 18px;
+            margin-top: em(-51, 18);
+            padding-left: em(20, 18);
+            padding-right: em(50, 18);
+        };
+    }
+    .close-search-panel {
+        position: absolute;
+        z-index: 999;
+        top: em(40);
+        right: em(40);
+        padding: 0;
+        @include border-radius(50%);
+        overflow: hidden;
+        margin: 0;
+        background: transparent;
+        border: none;
+        .icon-remove{
+            display: block;
+            font-size: em(52);
+            color: #000000;
+            @include transition();
+        }
+        &:hover{
+            .icon-remove{
+                color: #fff;
+            }
+        }
+    }
+    .submit{
+        position: absolute;
+        top: em(-48);
+        right: em(30);
+        background: transparent;
+        border: none;
+        .icon-lupa{
+            position: relative;
+            display: block;
+            font-size: em(56);
+            color: #000000;
+        }
+    }
+}
+.m-works{
+    object-fit: contain;
+    height: 100%;
+    width: 100%;
+    text-align: left !important; 
+    overflow: hidden;
+    position: relative; 
+    &:hover{
+        .works-body{ 
+            h4, p, .icon-forward{
+                opacity: 1;
+                @include css3-prefix(transform, translate3d(0px, 0px, 0px));
+            }  
+            &.red{
+                background: #ef4138;
+            }
+            &.green{
+                background: #35a32f;
+            } 
+            &.blue{
+                background: #3c87ef;
+            }
+            &.yellow{
+                background: #ffcb00;
+                h4, p, i{
+                    color: #000;
+                    
+                }
+            }
+        }
+        .img{ 
+            & > img{ 
+                @include css3-prefix(transform, rotate(-2deg) scale(1.10));   
+            }
+        }
+    }    
+    .img{  
+        position: relative;
+        z-index: 1;
+        overflow: hidden;         
+        width: 100%;
+        height: 100%;
+        & > a{
+            display: block;
+            width: 100%;
+            height: 100%;
+            @include transition();
+            
+        }
+        img{
+            z-index: 1;
+            position: relative;
+            //            width: 101%; 
+            width: 100%;             
+            display: block;
+//            min-height: 100%;
+            @include css3-prefix(transition, all 0.8s ease-in-out 0s);
+            @include respond-to(xs){
+                width: 100%;
+                min-width: 100%;
+            }
+        }
+    }     
+    .first-content{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 2; 
+        @include respond-to(xs){
+            padding-top: 37px;
+            padding-bottom: 37px; 
+        }
+        img{
+            width: auto;
+            @include inline-block();
+            min-width: 0;
+            min-height: 0;  
+            @include respond-to(xs){
+                 
+                margin-bottom: 38px; 
+            }
+        }
+         
+    }
+    .works-body{
+        cursor: pointer;  
+        position: absolute; 
+        padding: 48px;
+        top: 0;
+        left: 0; 
+        z-index: 2;
+        width: 100%;
+        height: 100%;
+        background: transparent;
+        @include css3-prefix(transition, all 0.2s ease-in-out 0s);
+        @include respond-to(xs){
+            position: relative;
+        } 
+        h4{
+            max-width: none;
+            text-align: left; 
+            @include font-size-2(20, 24); 
+            padding-bottom: 23px;
+            color: #fff;
+            opacity: 0;
+            @include css3-prefix(transition, all 0.2s ease-in-out 0s);  
+            @include css3-prefix(transform, translate3d(0px, 100%, 0px));
+            @include respond-to(sm){
+                padding-bottom: 40px;   
+            }
+            @include respond-to(md){
+                @include font-size-2(28, 38); 
+            }
+        }        
+        p{
+            max-width: none;          
+            color: #fff; 
+            padding: 0;  
+            opacity: 0;
+            @include css3-prefix(transition, all 0.3s ease-in-out 0s);
+            @include css3-prefix(transform, translate3d(0px, 100%, 0px));
+        }
+       
+        .icon-forward{
+            position: absolute;
+            bottom: 47px;
+            left: 50px;
+            font-size: 72px;
+            color: #fff;
+            opacity: 0;
+            @include css3-prefix(transition, all 0.4s ease-in-out 0s); 
+            @include css3-prefix(transform, translate3d(0px, 100%, 0px));          
+        }
+       
+        @include respond-to(xs){
+            z-index: 1;
+            &.red{
+                background: #ef4138;
+            }
+            &.red{
+                background: #ef4138;
+            }
+            &.green{
+                background: #35a32f;
+            }
+            &.blue{
+                background: #3c87ef;
+            }
+            &.yellow{
+                background: #ffcb00;
+                h4, p, i{
+                    color: #000;
+
+                } 
+            }
+            h4, p, .icon-forward{
+                opacity: 1;
+                @include css3-prefix(transform, translate3d(0px, 0px, 0px));
+            }
+            .works-content{
+                padding-bottom: 30px;
+            }
+            .icon-forward{
+                position: static;              
+            }
+        }
+        @media only screen and (min-width: 992px) and (max-width: 1500px) {           
+            padding: 20px;        
+            height: 100%;
+            .works-content{    
+                p{
+                    display: none;
+                }                 
+            }
+            .icon-forward{
+//                display: none; 
+                bottom: 20px;
+                left: 20px; 
+            } 
+        } 
+    }
+    .works-content{
+        @extend %clearfix;        
+    }   
+    
+    
+}
+
+.inverse{
+    .icon-forward{
+        color: #001227 !important;
+    }
+}
+
+.m-button-down{
+    width: 34px; 
+    text-align: center;
+    @include transition();
+    cursor: pointer;
+    margin-top: 25px;
+    position: absolute;
+    bottom: 52px;
+    left: 50%;
+    margin-left: -10px;
+    z-index: 3;
+    .icon-scrolling{
+        color: #fff;
+    }
+    span{
+        .i-1{
+            @include animation(i-1 0.4s ease infinite);
+        }
+        .i-2{
+            @include animation(i-2 0.4s ease infinite);
+        }
+        .i-3{
+            @include animation(i-3 0.4s ease infinite);
+        }
+    }
+    &:hover{
+
+    }
+    .icon-scrolling{
+        display: block;
+        width: 100%;
+        font-size: 50px;
+        color: #929faf;
+        margin-bottom: 7px;
+    }
+    span{
+        display: block;
+        width: 100%;
+        padding-top: 0;
+        i{
+            
+            display: block;
+            width: 100%;
+            color: #fff;
+            font-size: 12px;
+            @include transition();
+            &.i-1{
+                opacity: 0.2;
+            }
+            &.i-2{
+                opacity: 0.6;
+            }
+            &.i-3{
+                opacity: 1;
+            }
+        }
+    }
+    @include keyframesAnimation(i-1){
+        0%{
+            opacity: 0.2;
+        }
+        50%{
+            opacity: 0.6;
+        }
+        100%{
+            opacity: 1;
+        }
+    };
+    @include keyframesAnimation(i-2){
+        0%{
+            opacity: 1;
+        }
+        50%{
+            opacity: 0.2;
+        }
+        100%{
+            opacity: 0.6;
+        }
+    };
+    @include keyframesAnimation(i-3){
+        0%{
+            opacity: 0.6;
+        }
+        50%{
+            opacity: 1;
+        }
+        100%{ 
+            opacity: 0.2;
+        }
+    }
+}
+.m-back-top{
+    cursor: pointer; 
+    position: fixed;
+    display: none;
+    right: 20px;
+    bottom: 20px;
+    width: 66px;
+    height: 66px;
+    @include border-radius(5px);
+    background: rgba(#223d62, 0.3); 
+    text-align: center;
+    z-index: 100; 
+    @include respond-to(xs){
+        display: none !important;  
+    }
+    i{
+        line-height: 66px;
+        color: #fff; 
+        font-size: 24px;  
+        @include transition();
+    }
+    &.hatch{
+        display: block;        
+    }
+    &:hover{
+         
+    }
+}
+.m-pagination{
+    text-align: center;
+    
+    ul{
+        @include inline-block();
+        @include clearfix();
+    }
+    li{
+        float: left;
+        margin: 0 1px; 
+    }
+    a, span{
+        width: 60px;
+        height: 60px;
+        display: block;      
+        @include border-radius(3px); 
+        color: #687893; 
+        cursor: pointer;
+        border: 3px solid transparent;         
+        @include font-size-2(30, 52);  
+        font-family: $font-Bold; 
+        @include transition();
+        &:hover{             
+            border: 3px solid #e0e4ec;
+            background: #e0e4ec;
+        }
+    }
+    span{
+        &.active{
+            border: 3px solid $color-1;
+        }
+    }
+    i{
+        color: #687893;   
+        font-size: 20px;
+    }
+    .prev, .next{
+        border: 3px solid #e0e4ec;
+        @include font-size-2(30, 54);
+        @include respond-to(xs){
+            @include font-size-2(20, 35); 
+        }
+    } 
+     
+    @include respond-to(xs){
+        a, span{
+            width: 35px;
+            height: 35px;
+            @include font-size-2(20, 32);  
+            border-width: 1px !important;              
+        }
+      
+    }
+} 
+
+

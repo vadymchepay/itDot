@@ -1,0 +1,54 @@
+@font-face {
+	font-family: 'GothaProBol';
+	src: url('../fonts/GothaProBol.eot');
+	src: url('../fonts/GothaProBol.eot') format('embedded-opentype'),
+	     url('../fonts/GothaProBol.woff2') format('woff2'),
+	     url('../fonts/GothaProBol.woff') format('woff'),
+	     url('../fonts/GothaProBol.ttf') format('truetype'),
+	     url('../fonts/GothaProBol.svg#GothaProBol') format('svg');
+}
+@font-face {
+	font-family: 'GothaProLig';
+	src: url('../fonts/GothaProLig.eot');
+	src: url('../fonts/GothaProLig.eot') format('embedded-opentype'),
+	     url('../fonts/GothaProLig.woff2') format('woff2'),
+	     url('../fonts/GothaProLig.woff') format('woff'),
+	     url('../fonts/GothaProLig.ttf') format('truetype'),
+	     url('../fonts/GothaProLig.svg#GothaProLig') format('svg');
+}
+@font-face {
+	font-family: 'open_sansextrabold';
+	src: url('../fonts/OpenSans-ExtraBold-webfont.eot');
+	src: url('../fonts/OpenSans-ExtraBold-webfont.eot?#iefix') format('embedded-opentype'),
+	     url('../fonts/OpenSans-ExtraBold-webfont.woff') format('woff'),
+	     url('../fonts/OpenSans-ExtraBold-webfont.ttf') format('truetype'),
+	     url('../fonts/OpenSans-ExtraBold-webfont.svg#open_sansextrabold') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+ 
+@font-face {
+    font-family: 'otakoyi';
+    src:url('../fonts/otakoyi/otakoyi.eot?-2yavsr');
+    src:url('../fonts/otakoyi/otakoyi.eot?#iefix-2yavsr') format('embedded-opentype'),
+        url('../fonts/otakoyi/otakoyi.ttf?-2yavsr') format('truetype'),
+        url('../fonts/otakoyi/otakoyi.woff?-2yavsr') format('woff'),
+        url('../fonts/otakoyi/otakoyi.svg?-2yavsr#otakoyi') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+ 
+
+@font-face {
+	font-family: 'gotham_probold';
+	src: url('../fonts/bold/gothaprobol-webfont.eot');
+	src: url('../fonts/bold/gothaprobol-webfont.eot?#iefix') format('embedded-opentype'),
+	     url('../fonts/bold/gothaprobol-webfont.woff2') format('woff2'),
+	     url('../fonts/bold/gothaprobol-webfont.woff') format('woff'),
+	     url('../fonts/bold/gothaprobol-webfont.ttf') format('truetype'),
+	     url('../fonts/bold/gothaprobol-webfont.svg#gotham_probold') format('svg');
+	font-weight: normal;
+	font-style: normal;
+
+}
+

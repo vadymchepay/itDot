@@ -1,0 +1,121 @@
+/** ============================
+    cms_content
+    ======================== **/
+#cms_content {
+
+	a, .link {
+		&:not(.btn){
+			cursor: pointer;
+			color: $color-h;
+			border-bottom: 2px solid $color-2;
+			@include transition();
+			font-family: $font-Bold;
+			&:hover {
+				border-bottom: 2px solid transparent;
+			}
+		}
+	}
+	h2 {
+		padding: em(44, 64) 0;
+	}
+	h3{				
+		text-align: center;
+		max-width: 660px;
+		margin: 0 auto;
+		padding: em(26, 36) 0 em(16, 36);
+	} 
+	h5 {		
+		font-family: $font-Bold;
+		text-align: center;
+		max-width: 790px;
+		margin: 0 auto;
+		padding: em(26, 36) 0 em(16, 36);
+	}
+	h6 {
+		padding: em(15) 0;
+		font-size: em(20);
+		line-height: lh(32, 20);
+		color: $color-h;
+		font-family: $font-Bold;
+	}	 
+	strong {
+		font-family: $font-Bold;
+		color: $color-h;
+        &.warning{
+            background: $color-1;
+            padding: em(3) em(5); 
+        }
+	}
+	span{
+		&.warning{
+			background: $color-1;
+			padding: em(3) em(5);
+		}
+	}
+	img{
+		margin: em(16) auto em(30);
+		max-width: 100%;
+		@include border-radius(5px);
+		display: block;
+		height: auto;
+	}
+	ul {
+		padding: 17px 0  em(40) em(24); 
+		li {
+			padding-left: em(36, 20);
+			font-size: em(20);
+			line-height: lh(40, 20);
+			color: #001227;
+			font-family: $font-Bold;
+			background: url("../img/li.png") no-repeat 0 em(16, 20);
+			& + li {
+
+			}
+		}
+	}
+	ol {
+		counter-reset: li;
+		padding: 0;
+		list-style: none;
+		padding-bottom: 30px;
+		li {
+
+			& + li {
+
+			}
+			&:before {
+				content: counter(li);
+				counter-increment: li;
+				position: absolute;
+				top: -1px;
+				left: -24px;
+				width: 0.2em;
+
+			} 
+		}
+	}
+	blockquote {
+		p {
+
+		}
+	}
+	table {
+
+		tr {
+
+			td {
+
+				&:first-child {
+
+				}
+			}
+			&:nth-child(odd) {
+
+			}
+		}
+	}
+}
+
+.cms_content {
+	@extend #cms_content;
+}
