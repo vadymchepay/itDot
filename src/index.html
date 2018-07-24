@@ -7,6 +7,7 @@
     <title>ItDot</title>
     <link rel="stylesheet" href="lib/bootstrap.min.css">
     <link rel="stylesheet" href="lib/animate.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
     <link rel="stylesheet" href="css/main.css"> </head>
 
 <body>
@@ -225,8 +226,7 @@
     <!-- SKILLS -->
     <section id="section3" class="skills-page">
         <div class="container tiles-container flex-box">
-            <div class="section-header d-header">
-                </div>
+            <div class="section-header d-header"> </div>
             <div class="row">
                 <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12 skills-wrap service wow fadeInUp animated tile" data-wow-duration="0.3s" data-wow-delay="0.2s">
                     <div class="skills-content text-center wow fadeInUp">
@@ -292,11 +292,12 @@
                 <div class="mask">
                     <div class="table">
                         <div class="table-cell" id="fResponse">
-                            <a class="btn btn-watch btn-letter" id="toggleFeedback" href="javascript:void(0)"> <span>Написать сообщение</span> </a>
+                            <a class="btn btn-watch btn-letter contact-lnk-btn" id="toggleFeedback" href="javascript:void(0)"> <span>Send us a message</span> </a>
                         </div>
                     </div>
                 </div>
-                <div class="message_form"> <i class="icon-remove" id="icon-remove"></i>
+                <div class="message_form">
+                    <div class="close-btn" id="icon-remove"><i class="far fa-times-circle"></i></div>
                     <div class="container-message">
                         <form id="feedback" action="ajax/Feedback/process" method="post">
                             <div class="row">
