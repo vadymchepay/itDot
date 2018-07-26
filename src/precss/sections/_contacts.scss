@@ -30,7 +30,7 @@
         color: #3399ff;
         text-decoration: none;
         text-align: center;
-        flex-wrap: 700;
+        font-weight: 700;
         border: 2px solid rgba(51, 153, 255, 1);
         border-radius: 0.25em;
         transition: 0.5s;
@@ -135,18 +135,26 @@
         z-index: 1;
         text-align: center;
         width: 100%;
-        .close-btn{
+        .close-btn {
             width: 30px;
             height: 30px;
             float: right;
-            margin-right: 100px;
-            
+            margin-right: 150px;
+            cursor: pointer;
+            transition: 0.5s;
+            i {
+                font-size: 30px;
+            }
+            &:hover {
+                color: aqua;
+                transform: rotate(180deg);
+                transition: 0.5s;
+            }
         }
         //        @include css3-prefix(transform, rotateX(-180deg));
         @include respond-to(xs) {
             @include css3-prefix(transform, rotateX(0deg));
         }
-        
     }
     .container-message {
         max-width: 973px;
@@ -185,9 +193,8 @@
     label {
         color: #393f50;
         font-size: 20px;
-        left: 0;
+        margin-right: 20px;
         line-height: 55px;
-        position: absolute;
         text-align: right;
         display: block;
         width: 185px;
@@ -199,7 +206,6 @@
     .conrol {
         text-align: left;
         width: 100%;
-        margin: 0 auto;
         max-width: 539px;
         @include clearfix();
         input {
@@ -215,24 +221,44 @@
             zoom: 1;
             vertical-align: middle;
         }
-        button {
+//        button {
+//            display: inline-block;
+//            zoom: 1;
+//            vertical-align: middle;
+//            font-size: 24px;
+//            line-height: 1;
+//            padding: 16px em(50, 24);
+//            background: $color-1;
+//            font-family: $font-Bold;
+//            border: none;
+//            color: #000;
+//            span:before {
+//                color: #000;
+//            }
+//            &:hover {}
+//            &:active {}
+//            @include respond-to(md) {
+//                float: right;
+//            }
+//        }
+        .send-btn {
             display: inline-block;
-            zoom: 1;
-            vertical-align: middle;
-            font-size: 24px;
-            line-height: 1;
-            padding: 16px em(50, 24);
-            background: $color-1;
-            font-family: $font-Bold;
-            border: none;
-            color: #000;
-            span:before {
-                color: #000;
-            }
-            &:hover {}
-            &:active {}
-            @include respond-to(md) {
-                float: right;
+            width: 260px;
+            height: 55px;
+            line-height: 45px;
+            margin-left: 20px;
+            color: #3399ff;
+            background-color: #fff;
+            text-decoration: none;
+            text-align: center;
+            font-weight: 700;
+            border: 2px solid rgba(51, 153, 255, 1);
+            border-radius: 0.5em;
+            text-transform: uppercase;
+            transition: 0.5s;
+            &:hover {
+                background-color: #3399ff;
+                color: #fff;
             }
         }
     }

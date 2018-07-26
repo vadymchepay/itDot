@@ -1263,7 +1263,7 @@ Main components
     color: #3399ff;
     text-decoration: none;
     text-align: center;
-    flex-wrap: 700;
+    font-weight: 700;
     border: 2px solid #3399ff;
     border-radius: 0.25em;
     transition: 0.5s; }
@@ -1358,7 +1358,15 @@ Main components
       width: 30px;
       height: 30px;
       float: right;
-      margin-right: 100px; }
+      margin-right: 150px;
+      cursor: pointer;
+      transition: 0.5s; }
+      .l-message .message_form .close-btn i {
+        font-size: 30px; }
+      .l-message .message_form .close-btn:hover {
+        color: aqua;
+        transform: rotate(180deg);
+        transition: 0.5s; }
     @media only screen and (max-width: 767px) {
       .l-message .message_form {
         -webkit-transform: rotateX(0deg);
@@ -1392,8 +1400,8 @@ Main components
     .l-message textarea:hover,
     .l-message textarea:active,
     .l-message textarea:focus {
-      border: 2px solid #ffdb00;
-      background: #ffdb00; }
+      border: 2px solid #3399ff;
+      background: #3399ff; }
   .l-message textarea {
     height: 135px;
     padding-top: 10px;
@@ -1401,9 +1409,8 @@ Main components
   .l-message label {
     color: #393f50;
     font-size: 20px;
-    left: 0;
+    margin-right: 20px;
     line-height: 55px;
-    position: absolute;
     text-align: right;
     display: block;
     width: 185px;
@@ -1413,7 +1420,6 @@ Main components
   .l-message .conrol {
     text-align: left;
     width: 100%;
-    margin: 0 auto;
     max-width: 539px;
     *zoom: 1; }
     .l-message .conrol:before, .l-message .conrol:after {
@@ -1432,22 +1438,24 @@ Main components
       display: inline-block;
       zoom: 1;
       vertical-align: middle; }
-    .l-message .conrol button {
+    .l-message .conrol .send-btn {
       display: inline-block;
-      zoom: 1;
-      vertical-align: middle;
-      font-size: 24px;
-      line-height: 1;
-      padding: 16px em(50, 24);
-      background: #ffdb00;
-      font-family: "gotham_probold", arial, sans-serif;
-      border: none;
-      color: #000; }
-      .l-message .conrol button span:before {
-        color: #000; }
-      @media only screen and (min-width: 992px) {
-        .l-message .conrol button {
-          float: right; } }
+      width: 260px;
+      height: 55px;
+      line-height: 45px;
+      margin-left: 20px;
+      color: #3399ff;
+      background-color: #fff;
+      text-decoration: none;
+      text-align: center;
+      font-weight: 700;
+      border: 2px solid #3399ff;
+      border-radius: 0.5em;
+      text-transform: uppercase;
+      transition: 0.5s; }
+      .l-message .conrol .send-btn:hover {
+        background-color: #3399ff;
+        color: #fff; }
   .l-message .icon-remove {
     position: absolute;
     top: 40px;
@@ -1471,7 +1479,7 @@ Main components
       -moz-transform: rotate(270deg);
       -o-transform: rotate(270deg);
       transform: rotate(270deg);
-      color: #ffdb00; }
+      color: #3399ff; }
     @media only screen and (max-width: 767px) {
       .l-message .icon-remove {
         display: none; } }
