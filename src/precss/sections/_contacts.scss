@@ -2,7 +2,7 @@
     width: 100%;
     .contacts-img {
         width: 100%;
-        padding: 20px 0;
+        padding: 50px 0;
         img {
             display: block;
             max-width: 629px;
@@ -13,7 +13,7 @@
 }
 
 .contacts-links {
-    padding: 20px 0 60px 0;
+    padding: 20px 0 100px 0;
     .link-title {
         color: #3399ff;
         text-transform: uppercase;
@@ -32,7 +32,7 @@
         text-align: center;
         font-weight: 700;
         border: 2px solid rgba(51, 153, 255, 1);
-        border-radius: 0.25em;
+        border-radius: 10px;
         transition: 0.5s;
         &:hover {
             background-color: #3399ff;
@@ -122,7 +122,7 @@
             text-transform: uppercase;
             font-weight: 700;
             border: 2px solid rgba(51, 153, 255, 1);
-            border-radius: 0.25em;
+            border-radius: 10px;
             transition: 0.5s;
             &:hover {
                 background-color: #3399ff;
@@ -151,7 +151,7 @@
                 transition: 0.5s;
             }
         }
-        //        @include css3-prefix(transform, rotateX(-180deg));
+//                @include css3-prefix(transform, rotateX(-180deg));
         @include respond-to(xs) {
             @include css3-prefix(transform, rotateX(0deg));
         }
@@ -253,7 +253,7 @@
             text-align: center;
             font-weight: 700;
             border: 2px solid rgba(51, 153, 255, 1);
-            border-radius: 0.5em;
+            border-radius: 10px;
             text-transform: uppercase;
             transition: 0.5s;
             &:hover {

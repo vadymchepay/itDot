@@ -277,8 +277,14 @@ Main components
 
 .cd-timeline-content .cd-date {
     float: left;
-    padding: .8em 0;
-    opacity: .7;
+//    padding: .8em 0;
+//    opacity: .7;
+    font-size: 60px;
+    color: #3399ff;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-weight: 700;
+    
 }
 
 .cd-timeline-content::before {

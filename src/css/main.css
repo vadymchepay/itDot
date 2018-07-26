@@ -297,6 +297,9 @@ template {
 [hidden] {
   display: none; }
 
+body {
+  font-family: 'Roboto'; }
+
 .flex-box {
   display: flex;
   flex-direction: row;
@@ -1036,8 +1039,11 @@ Main components
 
 .cd-timeline-content .cd-date {
   float: left;
-  padding: .8em 0;
-  opacity: .7; }
+  font-size: 60px;
+  color: #3399ff;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-weight: 700; }
 
 .cd-timeline-content::before {
   content: '';
@@ -1205,7 +1211,11 @@ Main components
 .skills-page {
   background: #3399ff;
   overflow: hidden;
-  padding-bottom: 30px; }
+  padding: 60px 0; }
+  .skills-page .section-header h2 {
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 700; }
   .skills-page .tiles-container {
     align-content: flex-start; }
   .skills-page .tile {
@@ -1216,12 +1226,15 @@ Main components
     text-align: center; }
     .skills-page .tile h2 {
       color: #fff;
-      text-transform: uppercase; }
+      text-transform: uppercase;
+      font-weight: 400; }
     .skills-page .tile h4 {
       color: #fff;
-      text-transform: uppercase; }
+      text-transform: uppercase;
+      font-weight: 400; }
     .skills-page .tile p {
-      color: #fff; }
+      color: #fff;
+      font-weight: 400; }
   .skills-page .section-header {
     background: transparent; }
   .skills-page .skills-wrap {
@@ -1239,7 +1252,7 @@ Main components
   width: 100%; }
   .contacts .contacts-img {
     width: 100%;
-    padding: 20px 0; }
+    padding: 50px 0; }
     .contacts .contacts-img img {
       display: block;
       max-width: 629px;
@@ -1247,7 +1260,7 @@ Main components
       margin: 0 auto; }
 
 .contacts-links {
-  padding: 20px 0 60px 0; }
+  padding: 20px 0 100px 0; }
   .contacts-links .link-title {
     color: #3399ff;
     text-transform: uppercase;
@@ -1265,7 +1278,7 @@ Main components
     text-align: center;
     font-weight: 700;
     border: 2px solid #3399ff;
-    border-radius: 0.25em;
+    border-radius: 10px;
     transition: 0.5s; }
     .contacts-links .contact-lnk-btn:hover {
       background-color: #3399ff;
@@ -1344,7 +1357,7 @@ Main components
       text-transform: uppercase;
       font-weight: 700;
       border: 2px solid #3399ff;
-      border-radius: 0.25em;
+      border-radius: 10px;
       transition: 0.5s; }
       .l-message .mask .contact-lnk-btn:hover {
         background-color: #3399ff;
@@ -1450,7 +1463,7 @@ Main components
       text-align: center;
       font-weight: 700;
       border: 2px solid #3399ff;
-      border-radius: 0.5em;
+      border-radius: 10px;
       text-transform: uppercase;
       transition: 0.5s; }
       .l-message .conrol .send-btn:hover {
