@@ -1,0 +1,39 @@
+.find-us{
+    .section-title{
+        width: 100%;
+        padding: 60px 0;
+        h1{
+            color: $color-1;
+            font-size: 2em;
+            text-transform: uppercase;
+            text-align: center;
+            font-weight: 700;
+        }
+    }
+    
+    .find-us-social{
+        width: 100%;    
+        padding: 60px 0;
+        background-color: $color-1;
+        color: #fff;
+        font-size: 3em;
+        .social-list {
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            .social-list-item {
+                margin: 0 50px;
+                .list-item-lnk {
+                    color: #fff;
+                    transition: 0.3s linear;
+                    &:hover {
+                        text-shadow: 2px 6px 5px #000;
+                        transition: 0.3s linear;
+                    }
+                }
+            }
+        }
+    }
+}

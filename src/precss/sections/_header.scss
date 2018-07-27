@@ -37,12 +37,12 @@ header {
             overflow: hidden;
             p {
                 padding: 15px 20px;
-                text-transform: uppercase;
                 color: #f9f9f9 !important;
-                border: 1px solid #f9f9f9;
+                border: 1px solid #9966ff;
                 font-size: 22px;
+                font-weight: 700;
                 transition: all .3s;
-                background: rgba(204, 204, 204, .5);
+                background: rgba(153, 102, 255, .5);
                 margin: 0;
                 line-height: normal;
                 position: relative;
@@ -57,7 +57,7 @@ header {
 
                 &:hover {
                     transition: padding-right ease-in-out .3s;
-                    padding-right: 212px;
+                    padding-right: 170px;
                     > span {
                         transition: left ease-in-out .3s;
                         left: 38px;
@@ -69,7 +69,7 @@ header {
 
     /* Mobile button */
     .menu-btn-wrapper {
-        width: 35px;
+        width: 63px;
         height: 44px;
         position: relative;
         cursor: pointer;
@@ -127,7 +127,7 @@ header {
         }
     }
     #nav-icon2 {
-        width: 63px;
+        width: 52px;
         height: 45px;
         position: relative;
         transform: rotate(0deg);
@@ -183,12 +183,12 @@ header {
 
                 &:nth-child(1) {
                     left: 5px;
-                    top: 7px;
+                    top: 10px;
                 }
 
                 &:nth-child(2) {
                     left: calc(50% - 5px);
-                    top: 7px;
+                    top: 10px;
                 }
 
                 &:nth-child(3) {
@@ -203,12 +203,12 @@ header {
 
                 &:nth-child(5) {
                     left: 5px;
-                    top: 29px;
+                    top: 26px;
                 }
 
                 &:nth-child(6) {
                     left: calc(50% - 5px);
-                    top: 29px;
+                    top: 26px;
                 }
             }
         }

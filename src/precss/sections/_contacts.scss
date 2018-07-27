@@ -100,7 +100,7 @@
         z-index: 2;
         top: 0;
         left: 0;
-        background: #3399ff;
+        background: #66ccff;
         @include css3-prefix(transform, rotateX(0deg));
         @include respond-to(xs) {
             display: none;
@@ -129,6 +129,76 @@
                 color: #fff;
             }
         }
+        .stripe-grid {
+            position: absolute;
+            top: 0px;
+            left: 0%;
+            width: 100%;
+            height: 100%;
+            transform: skewY(-11deg);
+            //used to hide jagged effect at the bottom of the container
+//            &:after {
+//                position: absolute;
+//                width: 100%;
+//                height: 1px;
+//                background-color: #fff;
+//                bottom: -1px;
+//                content: '';
+//                left: 0%;
+//            }
+            //each singular stripe (sizing / position)
+            .stripe {
+                position: absolute;
+                height: 22%;
+                width: 100%;
+                &.zero {
+                    top: -50%;
+                    height: 50%;
+                }
+                &.first {
+                    width: 75%;
+                    left: 0%;
+                }
+                &.second {
+                    right: 0%;
+                    width: 25%;
+                    top: 25%;
+                }
+                &.third {
+                    bottom: 0%;
+                    width: 50%;
+                    right: 0px;
+                }
+                &.fourth {
+                    bottom: 0%;
+                    width: 50%;
+                    left: 0%;
+                }
+            }
+            //blue grid
+            &.blue {
+                background: $color__blue_regular;
+                .zero {
+                    background-color: $color__blue_regular;
+                }
+                .first {
+                    background-color: $color__blue_regular;
+                    background: linear-gradient(90deg, $color__blue_light, $color__blue_regular);
+                }
+                .second {
+                    background-color: $color__blue_regular;
+                    background: linear-gradient(90deg, $color__blue_regular, lighten($color__blue_light, 20%));
+                }
+                .third {
+                    background-color: $color__blue_regular;
+                    background: linear-gradient(90deg, $color__blue_regular, $color__blue_dark);
+                }
+                .fourth {
+                    background-color: $color__gray_light;
+                    background: linear-gradient(90deg, $color__gray_light, $color__gray_regular);
+                }
+            }
+        }
     }
     .message_form {
         padding-top: 60px;
@@ -151,7 +221,7 @@
                 transition: 0.5s;
             }
         }
-//                @include css3-prefix(transform, rotateX(-180deg));
+        //                @include css3-prefix(transform, rotateX(-180deg));
         @include respond-to(xs) {
             @include css3-prefix(transform, rotateX(0deg));
         }
@@ -221,26 +291,26 @@
             zoom: 1;
             vertical-align: middle;
         }
-//        button {
-//            display: inline-block;
-//            zoom: 1;
-//            vertical-align: middle;
-//            font-size: 24px;
-//            line-height: 1;
-//            padding: 16px em(50, 24);
-//            background: $color-1;
-//            font-family: $font-Bold;
-//            border: none;
-//            color: #000;
-//            span:before {
-//                color: #000;
-//            }
-//            &:hover {}
-//            &:active {}
-//            @include respond-to(md) {
-//                float: right;
-//            }
-//        }
+        //        button {
+        //            display: inline-block;
+        //            zoom: 1;
+        //            vertical-align: middle;
+        //            font-size: 24px;
+        //            line-height: 1;
+        //            padding: 16px em(50, 24);
+        //            background: $color-1;
+        //            font-family: $font-Bold;
+        //            border: none;
+        //            color: #000;
+        //            span:before {
+        //                color: #000;
+        //            }
+        //            &:hover {}
+        //            &:active {}
+        //            @include respond-to(md) {
+        //                float: right;
+        //            }
+        //        }
         .send-btn {
             display: inline-block;
             width: 260px;
