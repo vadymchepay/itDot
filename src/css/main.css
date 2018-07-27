@@ -1301,17 +1301,17 @@ Main components
   .l-message .message-wrapper.flipped .mask {
     position: absolute;
     z-index: 1;
-    -webkit-transform: rotateX(-180deg);
-    -moz-transform: rotateX(-180deg);
-    -o-transform: rotateX(-180deg);
-    transform: rotateX(-180deg); }
+    -webkit-transform: rotateY(-180deg);
+    -moz-transform: rotateY(-180deg);
+    -o-transform: rotateY(-180deg);
+    transform: rotateY(-180deg); }
   .l-message .message-wrapper.flipped .message {
     position: relative;
     z-index: 3;
-    -webkit-transform: rotateX(0deg);
-    -moz-transform: rotateX(0deg);
-    -o-transform: rotateX(0deg);
-    transform: rotateX(0deg); }
+    -webkit-transform: rotateY(0deg);
+    -moz-transform: rotateY(0deg);
+    -o-transform: rotateY(0deg);
+    transform: rotateY(0deg); }
     .l-message .message-wrapper.flipped .message .btn:hover span:before {
       color: #000; }
   .l-message .message-wrapper .mask,
@@ -1343,10 +1343,10 @@ Main components
     top: 0;
     left: 0;
     background: #66ccff;
-    -webkit-transform: rotateX(0deg);
-    -moz-transform: rotateX(0deg);
-    -o-transform: rotateX(0deg);
-    transform: rotateX(0deg); }
+    -webkit-transform: rotateY(0deg);
+    -moz-transform: rotateY(0deg);
+    -o-transform: rotateY(0deg);
+    transform: rotateY(0deg); }
     @media only screen and (max-width: 767px) {
       .l-message .mask {
         display: none; } }
@@ -1434,10 +1434,10 @@ Main components
         transition: 0.5s; }
     @media only screen and (max-width: 767px) {
       .l-message .message_form {
-        -webkit-transform: rotateX(0deg);
-        -moz-transform: rotateX(0deg);
-        -o-transform: rotateX(0deg);
-        transform: rotateX(0deg); } }
+        -webkit-transform: rotateY(0deg);
+        -moz-transform: rotateY(0deg);
+        -o-transform: rotateY(0deg);
+        transform: rotateY(0deg); } }
   .l-message .container-message {
     max-width: 973px;
     margin: 0 auto;
