@@ -307,7 +307,6 @@ $(document).ready(function () {
     $(window).scroll(function () {
         var screenOffset = $Rocket.offset().top - $('.animated').innerHeight();
         var sPos = $(window).scrollTop();
-        console.log(sPos);
         if (sPos > 0) {
             $Rocket.css({
                 'left': rLeftNum - sPos / 2,
@@ -323,7 +322,6 @@ $(document).ready(function () {
     $(window).scroll(function () {
         var screenOffset = $Cosmonaut.offset().top - $('.animated').innerHeight();
         var sPos = $(window).scrollTop();
-        console.log(sPos);
         if (sPos > 0) {
             $Cosmonaut.css({
                 'left': cLeftNum + sPos / 2,

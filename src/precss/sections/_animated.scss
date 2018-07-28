@@ -239,7 +239,7 @@
     background-image: url(../img/second_bg.png);
     background-repeat: no-repeat;
     background-size: 100% 100%;
-    background-position-y: -26%;
+//    background-position-y: -26%;
     overflow: hidden;
     position: relative;
     z-index: 1;
@@ -253,7 +253,6 @@
     position: absolute;
     top: 0;
     left: 0;
-    right: 0;
     bottom: 0;
     z-index: 2;
 }
