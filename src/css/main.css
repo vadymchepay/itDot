@@ -1591,11 +1591,32 @@ Main components
 
 @media screen and (max-width: 1200px) {
   .logo_container {
-    transform: translate(-50%, -50%) scale(0.6, 0.6); } }
+    transform: translate(-50%, -50%) scale(0.8, 0.8); }
+  .cosmonaut {
+    max-width: 10.62%;
+    max-height: 21.08%;
+    top: 64.80%;
+    left: 60.83%;
+    z-index: 3; }
+  .rocket {
+    max-width: 5%;
+    max-height: 11.7%;
+    top: 54.19%;
+    left: 71.82%;
+    z-index: 2; }
+  .ufo {
+    max-width: 6.4%;
+    max-height: 6.4;
+    top: 53.63%;
+    left: 12.45%;
+    z-index: 3; }
+  .message_form .close-btn {
+    top: 0;
+    right: 100px; } }
 
 @media screen and (max-width: 960px) {
   .logo_container {
-    transform: translate(-50%, -50%) scale(0.7, 0.7); }
+    transform: translate(-50%, -50%) scale(0.8, 0.8); }
   .cosmonaut {
     max-width: 10.62%;
     max-height: 21.08%;
@@ -1613,29 +1634,34 @@ Main components
     max-height: 6.4;
     top: 53.63%;
     left: 12.45%;
-    z-index: 3; } }
+    z-index: 3; }
+  .message_form .close-btn {
+    top: 0;
+    right: 100px; } }
 
 @media screen and (max-width: 768px) {
   .logo_container {
-    transform: translate(-50%, -50%) scale(0.7, 0.7); }
+    transform: translate(-50%, -50%) scale(0.8, 0.8); }
   .cosmonaut {
-    max-width: 10.62%;
-    max-height: 21.08%;
+    max-width: 14.16%;
+    max-height: 28.1%;
     top: 64.80%;
     left: 60.83%;
     z-index: 3; }
   .rocket {
-    max-width: 5%;
-    max-height: 11.7%;
+    max-width: 6.66%;
+    max-height: 15.6%;
     top: 54.19%;
-    left: 71.82%;
+    left: 80%;
     z-index: 2; }
   .ufo {
-    max-width: 6.4%;
-    max-height: 6.4;
+    max-width: 8.54%;
+    max-height: 8.52;
     top: 53.63%;
     left: 12.45%;
     z-index: 3; }
+  .second_screen {
+    margin-top: -2px; }
   .logo_3d {
     max-width: 100%;
     max-height: 100%;
@@ -1652,38 +1678,39 @@ Main components
     .logo_3d img {
       display: none; }
   .people {
-    width: 70.68%;
-    height: 92.41%;
+    width: 100%;
+    height: 100%;
     background-image: url(../img/people_768px.png);
-    background-size: 85%;
+    background-size: 100%;
     background-repeat: no-repeat;
-    background-position: 100%;
+    background-position: 100% 55%;
     overflow: hidden;
     position: absolute;
     top: 50%;
-    left: 47%;
+    left: 52%;
     transform: translate(-50%, -50%);
     z-index: 3; }
     .people img {
       display: none; }
   .screens {
-    top: 4.5%;
-    left: 72.5%; }
+    top: 2.5%;
+    left: 85.5%;
+    z-index: 3; }
   .lamp {
     top: 13%;
-    left: 45%;
+    left: 40%;
     z-index: 3; }
   .wheel_1 {
     top: 15%;
-    left: 48%;
+    left: 43%;
     z-index: 3; }
   .wheel_2 {
     top: 13.5%;
-    left: 50%;
+    left: 45%;
     z-index: 3; }
   .message {
     top: 47.5%;
-    left: 35.5%; }
+    left: 23.5%; }
   @keyframes new_msg {
     0% {
       top: 47.5%;
@@ -1707,9 +1734,9 @@ Main components
     margin-left: 0;
     margin: 20px auto; } }
 
-@media screen and (min-width: 320px) and (max-width: 575px) {
+@media screen and (min-width: 320px) and (max-width: 576px) {
   .logo_container {
-    transform: translate(-50%, -50%) scale(0.5, 0.5); }
+    transform: translate(-50%, -50%) scale(0.45, 0.45); }
   .cosmonaut {
     max-width: 21.24%;
     max-height: 42.15%;
@@ -1748,9 +1775,8 @@ Main components
     width: 100%;
     height: 100%;
     background-image: url(../img/people_768px.png);
-    background-size: 100% 75%;
+    background-size: 100% 100%;
     background-repeat: no-repeat;
-    background-position: -90% 47%;
     overflow: hidden;
     position: absolute;
     top: 50%;
@@ -1760,19 +1786,19 @@ Main components
     .people img {
       display: none; }
   .screens {
-    top: 14.5%;
+    top: 5.5%;
     left: 81%;
     z-index: 3; }
   .lamp {
-    top: 22%;
+    top: 13%;
     left: 33%;
     z-index: 3; }
   .wheel_1 {
-    top: 24%;
+    top: 15%;
     left: 39%;
     z-index: 3; }
   .wheel_2 {
-    top: 23%;
+    top: 14%;
     left: 42%;
     z-index: 3; }
   .message {

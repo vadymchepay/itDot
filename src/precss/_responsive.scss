@@ -18,7 +18,36 @@
 
 @media screen and (max-width: 1200px) {
     .logo_container {
-        transform: translate(-50%, -50%) scale(0.6, 0.6);
+        transform: translate(-50%, -50%) scale(0.8, 0.8);
+    }
+    .cosmonaut {
+        max-width: 10.62%;
+        max-height: 21.08%;
+        top: 64.80%;
+        left: 60.83%;
+        z-index: 3
+    }
+
+    .rocket {
+        max-width: 5%;
+        max-height: 11.7%;
+        top: 54.19%;
+        left: 71.82%;
+        z-index: 2
+    }
+
+    .ufo {
+        max-width: 6.4%;
+        max-height: 6.4;
+        top: 53.63%;
+        left: 12.45%;
+        z-index: 3
+    }
+    .message_form {
+        .close-btn {
+            top: 0;
+            right: 100px;
+        }
     }
 }
 
@@ -26,9 +55,8 @@
 
 @media screen and (max-width: 960px) {
     .logo_container {
-        transform: translate(-50%, -50%) scale(0.7, 0.7);
+        transform: translate(-50%, -50%) scale(0.8, 0.8);
     }
-
     .cosmonaut {
         max-width: 10.62%;
         max-height: 21.08%;
@@ -51,37 +79,49 @@
         top: 53.63%;
         left: 12.45%;
         z-index: 3
+    }
+    .message_form {
+        .close-btn {
+            top: 0;
+            right: 100px;
+        }
     }
 }
 
 @media screen and (max-width: 768px) {
     .logo_container {
-        transform: translate(-50%, -50%) scale(0.7, 0.7);
+        transform: translate(-50%, -50%) scale(0.8, 0.8);
     }
 
     .cosmonaut {
-        max-width: 10.62%;
-        max-height: 21.08%;
+        max-width: 14.16%;
+        max-height: 28.1%;
         top: 64.80%;
         left: 60.83%;
         z-index: 3
     }
 
     .rocket {
-        max-width: 5%;
-        max-height: 11.7%;
+        max-width: 6.66%;
+        max-height: 15.6%;
         top: 54.19%;
-        left: 71.82%;
+        left: 80%;
         z-index: 2
     }
 
     .ufo {
-        max-width: 6.4%;
-        max-height: 6.4;
+        max-width: 8.54%;
+        max-height: 8.52;
         top: 53.63%;
         left: 12.45%;
         z-index: 3
     }
+
+    .second_screen {
+        margin-top: -2px;
+        
+    }
+
     .logo_3d {
         max-width: 100%;
         max-height: 100%;
@@ -101,17 +141,17 @@
     }
 
     .people {
-        width: 70.68%;
-        height: 92.41%;
+        width: 100%;
+        height: 100%;
         background-image: url(../img/people_768px.png);
-        background-size: 85%;
+        background-size: 100%;
         background-repeat: no-repeat;
-        background-position: 100%;
+        background-position: 100% 55%;
 
         overflow: hidden;
         position: absolute;
         top: 50%;
-        left: 47%;
+        left: 52%;
         transform: translate(-50%, -50%);
         z-index: 3;
 
@@ -121,29 +161,30 @@
         }
     }
     .screens {
-        top: 4.5%;
-        left: 72.5%;
+        top: 2.5%;
+        left: 85.5%;
+        z-index: 3;
     }
 
     .lamp {
         top: 13%;
-        left: 45%;
+        left: 40%;
         z-index: 3;
     }
     .wheel_1 {
         top: 15%;
-        left: 48%;
+        left: 43%;
         z-index: 3;
     }
     .wheel_2 {
         top: 13.5%;
-        left: 50%;
+        left: 45%;
         z-index: 3;
     }
 
     .message {
         top: 47.5%;
-        left: 35.5%;
+        left: 23.5%;
     }
 
     @keyframes new_msg {
@@ -190,172 +231,10 @@
 
 }
 
-//@media screen and (max-width: 576px) {
-//    .logo_container {
-//        transform: translate(-50%, -50%) scale(0.7, 0.7);
-//    }
-//
-//    .cosmonaut {
-//        max-width: 14.16%;
-//        max-height: 28.1%;
-//        top: 64.80%;
-//        left: 60.83%;
-//        z-index: 3
-//    }
-//
-//    .rocket {
-//        max-width: 6.66%;
-//        max-height: 15.6%;
-//        top: 54.19%;
-//        left: 80%;
-//        z-index: 2
-//    }
-//
-//    .ufo {
-//        max-width: 8.54%;
-//        max-height: 8.52;
-//        top: 53.63%;
-//        left: 12.45%;
-//        z-index: 3
-//    }
-//    .logo_3d {
-//        max-width: 100%;
-//        max-height: 100%;
-//        background-image: url(../img/logo_3d.png);
-//        background-size: auto 100%;
-//        background-position: center;
-//        overflow: hidden;
-//        position: absolute;
-//        top: 0;
-//        left: 0;
-//        right: 0;
-//        bottom: 0;
-//        z-index: 2;
-//        img {
-//            display: none;
-//        }
-//    }
-//
-//    .people {
-//        width: 100%;
-//        height: 100%;
-//        background-image: url(../img/people_768px.png);
-//        background-size: 105%;
-//        background-repeat: no-repeat;
-//        background-position: -90% 47%;
-//        overflow: hidden;
-//        position: absolute;
-//        top: 50%;
-//        left: 47%;
-//        transform: translate(-50%, -50%);
-//        z-index: 3;
-//
-//
-//        img {
-//            display: none;
-//        }
-//    }
-//    .screens {
-//        top: 9.5%;
-//        left: 89%;
-//    }
-//
-//    .lamp {
-//        top: 18%;
-//        left: 40%;
-//        z-index: 3;
-//    }
-//    .wheel_1 {
-//        top: 20%;
-//        left: 45%;
-//        z-index: 3;
-//    }
-//    .wheel_2 {
-//        top: 18.5%;
-//        left: 48%;
-//        z-index: 3;
-//    }
-//
-//    .message {
-//        top: 47.5%;
-//        left: 24.5%;
-//    }
-//
-//    @keyframes new_msg {
-//        0% {
-//            top: 48.5%;
-//            opacity: 0;
-//        }
-//
-//        15% {
-//            top: 46.5%;
-//            opacity: 0.5;
-//        }
-//        30% {
-//            top: 43.5%;
-//            opacity: 1;
-//        }
-//        90% {
-//            top: 43.5%;
-//            opacity: 1;
-//        }
-//
-//        100% {
-//            top: 43.5%;
-//            opacity: 0;
-//        }
-//
-//
-//    }
-//
-//    #cd-timeline {
-//        .cd-timeline-block {
-//            .cd-timeline-content {
-//                p {
-//                    font-size: 18px;
-//                }
-//                .cd-date {
-//                    font-size: 30px;
-//                }
-//            }
-//        }
-//    }
-//
-//
-//    .contacts {
-//        .contacts-img {
-//            .svg {
-//                max-width: 560px;
-//                width: 560px;
-//                svg {
-//                    width: 560px;
-//                    height: 179px;
-//                }
-//            }
-//        }
-//    }
-//
-//    .l-message {
-//        .message_form {
-//            .close-btn {
-//                top: 4px;
-//                right: 30px;
-//            }
-//        }
-//        .conrol {
-//            .send-btn {
-//                display: block;
-//                margin-left: 0;
-//                margin: 20px auto;
-//            }
-//        }
-//    }
-//
-//}
 
-@media screen and (min-width: 320px) and (max-width: 575px) {
+@media screen and (min-width: 320px) and (max-width: 576px) {
     .logo_container {
-        transform: translate(-50%, -50%) scale(0.5, 0.5);
+        transform: translate(-50%, -50%) scale(0.45, 0.45);
     }
 
     .cosmonaut {
@@ -404,9 +283,8 @@
         width: 100%;
         height: 100%;
         background-image: url(../img/people_768px.png);
-        background-size: 100% 75%;
+        background-size: 100% 100%;
         background-repeat: no-repeat;
-        background-position: -90% 47%;
         overflow: hidden;
         position: absolute;
         top: 50%;
@@ -420,23 +298,23 @@
         }
     }
     .screens {
-        top: 14.5%;
+        top: 5.5%;
         left: 81%;
         z-index: 3;
     }
 
     .lamp {
-        top: 22%;
+        top: 13%;
         left: 33%;
         z-index: 3;
     }
     .wheel_1 {
-        top: 24%;
+        top: 15%;
         left: 39%;
         z-index: 3;
     }
     .wheel_2 {
-        top: 23%;
+        top: 14%;
         left: 42%;
         z-index: 3;
     }
@@ -491,7 +369,7 @@
         .contacts-img {
             .svg {
                 max-width: 310px;
-               
+
                 svg {
                     width: 310px;
                     height: 98px;
