@@ -24,8 +24,8 @@ const config = {
         dest: '/css'
     },
     libs: {
-        src: '/libs/**/*.*',
-        dest: '/libs'
+        src: '/lib/**/*.*',
+        dest: '/lib'
     },
     img: {
         src: '/img/**/*.*',
